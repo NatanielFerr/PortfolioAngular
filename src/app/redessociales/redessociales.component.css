@@ -1,0 +1,24 @@
+/*  logos redes sociales  */
+i.fa-brands.fa-linkedin.fa-2xl:hover{
+    color: #2578d1;
+}
+i.fa-brands.fa-github.fa-2xl:hover{
+    color: #9c9ca3;
+}
+i.fa-brands.fa-instagram.fa-2xl:hover{
+    color: #800080;
+}
+i.fa-brands.fa-twitter.fa-2xl:hover{
+    color: #08d8eb;
+}
+.list-group{
+    --bs-list-group-bg: transparent;
+    --bs-list-group-border-color: transparent;
+}
+.list-group-item,
+a#boton-linkedin,
+a#boton-instagram,
+a#boton-github,
+a#boton-twitter{
+    color: #ffffff;
+}

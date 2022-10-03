@@ -1,0 +1,6 @@
+/*  Acomodo del tamaño del modal sesión  */
+.modal-content{
+    width: 130% !important;
+    box-shadow: 0 0 20px 0 rgba(151, 57, 195, 0.631);
+  }
+  
