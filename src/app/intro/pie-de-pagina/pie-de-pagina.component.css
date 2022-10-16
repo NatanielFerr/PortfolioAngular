@@ -1,0 +1,33 @@
+/* Pie De Página */
+.pie-de-pagina{
+    background: #8d12b9;
+    background: -moz-linear-gradient(90deg, #8d12b9 0%, #429cc1 50%, #a029d6 100%);
+    background: -webkit-linear-gradient(90deg, #8d12b9 0%, #429cc1 50%, #a029d6 100%);
+    background: linear-gradient(90deg, #8d12b9 0%, #429cc1 50%, #a029d6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8d12b9",endColorstr="#a029d6",GradientType=1);
+  }
+  
+  .pie-de-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5rem 0rem;
+    color: #ffffff;
+  }
+  
+  .pie-de-pagina .grupo-2{
+    padding: 15px 10px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .pie-de-pagina .grupo-2 small{
+    font-size: 15px;
+  }
+  
+  .pie-de-pagina .boton-descarga{
+    margin-left: 2rem;
+    color: #ffffff;
+  }

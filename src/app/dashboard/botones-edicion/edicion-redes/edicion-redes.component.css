@@ -1,0 +1,34 @@
+/*  botones de edición dashboard  */
+i.fa-solid.fa-pen-to-square.fa-xl{
+  display: block;
+  color: #36ceb2;
+}
+
+i.fa-solid.fa-pen-to-square.fa-xl:hover{
+  transform: scale(120%);
+}
+
+/*  botones de borrar dashboard  */
+i.fa-solid.fa-x.fa-xl{
+  display: block;
+  color: #36ceb2;
+}
+
+/*  botones edición redes  */
+li.list-group-item.edicion-redes{
+margin-top: -1rem;
+}
+
+i.fa-solid.fa-x.fa-xl:hover{
+  transform: scale(120%);
+}
+
+.list-group{
+  --bs-list-group-bg: transparent;
+  --bs-list-group-border-color: transparent;
+}
+
+/*  Posición Botones Edición Dashboard  */
+ul.list-group.botones-de-edicion.list-group-horizontal {
+  position: absolute;
+}
