@@ -49,6 +49,14 @@ import { EdicionRedesComponent } from './dashboard/botones-edicion/edicion-redes
 import { PieDePaginaDashboardComponent } from './dashboard/pie-de-pagina-dashboard/pie-de-pagina-dashboard.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ApartadosDashboardComponent } from './dashboard/apartados-dashboard/apartados-dashboard.component';
+import { BotonesNavbarComponent } from './intro/botones-navbar/botones-navbar.component';
+import { BotonAcercadeComponent } from './intro/botones-navbar/boton-acercade/boton-acercade.component';
+import { BotonProyectosComponent } from './intro/botones-navbar/boton-proyectos/boton-proyectos.component';
+import { BotonMasComponent } from './intro/botones-navbar/boton-mas/boton-mas.component';
+import { BotonExperienciaComponent } from './intro/botones-navbar/boton-experiencia/boton-experiencia.component';
+import { BotonEducacionComponent } from './intro/botones-navbar/boton-educacion/boton-educacion.component';
+import { BotonHabilidadesComponent } from './intro/botones-navbar/boton-habilidades/boton-habilidades.component';
+import { BotonContactoComponent } from './intro/botones-navbar/boton-contacto/boton-contacto.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +107,14 @@ import { ApartadosDashboardComponent } from './dashboard/apartados-dashboard/apa
     PieDePaginaDashboardComponent,
     ContactoComponent,
     ApartadosDashboardComponent,
+    BotonesNavbarComponent,
+    BotonAcercadeComponent,
+    BotonProyectosComponent,
+    BotonMasComponent,
+    BotonExperienciaComponent,
+    BotonEducacionComponent,
+    BotonHabilidadesComponent,
+    BotonContactoComponent,
   ],
   imports: [
     BrowserModule,

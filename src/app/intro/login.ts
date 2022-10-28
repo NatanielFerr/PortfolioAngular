@@ -1,20 +1,26 @@
-const login = document.querySelector('#login'); as HTMLButtonElement;
-const singin = document.querySelector('#singin'); as HTMLButtonElement;
-const logout = document.querySelector('#logout'); as HTMLButtonElement;
-const perfil = document.querySelector('.profile-picture'); as HTMLDivElement;
+const login = document.querySelector('#login') as HTMLButtonElement;
+const singin = document.querySelector('#singin') as HTMLButtonElement;
+const logout = document.querySelector('#logout') as HTMLButtonElement;
+const profile = document.querySelector('.profile-picture') as HTMLDivElement;
 const imagen = profile.firstElementChild as HTMLImageElement;
-const email = document.querySelector('#floatinginput'); as HTMLInputElement;
-const password = document.querySelector('#floatingpassword'); as HTMLInputElement;
-const icons = document.getElementById('#icons'); as HTMLUListElement;
+const email = document.querySelector('#floatinginput') as HTMLInputElement;
+const password = document.querySelector('#floatingpassword') as HTMLInputElement;
+const icons = document.getElementById('#icons') as HTMLUListElement;
 
 const edicion = document.querySelectorAll('.java');
+let usuario: string = "admin";
+let contraseña: string = "admin";
+function puro() {
+    
+
 
 login.addEventListener('click', () => {
-    if (email.value == 'admin' && password.value == 'admin') {
+    if (email.value == "admin" && password.value == "admin") {
         imagen.classList.add('imagen');
         edicion.forEach(edit => {
             edit.classList.remove('visuallyhidden');
-            icons.id = 'icons.dashboard';
+        });
+            icons.id = 'botones-edicion.dashboard';
         }
     });
 
@@ -26,4 +32,6 @@ login.addEventListener('click', () => {
             singin.classList.remove('visuallyhidden');
             logout.classList.add('visuallyhidden');
             icons.id = 'iconos';
-        })
+    });
+
+}
