@@ -10,10 +10,8 @@ import { ApartadoAcercademiComponent } from './apartados/apartado-acercademi/apa
 
 
 const routes: Routes = [
-  {path: 'intro', component: IntroComponent,
-children :[
-  {path: 'acercade', component: ApartadoAcercademiComponent}
-]},
+  {path: 'intro', component: IntroComponent},
+  {path: 'acercade', component: ApartadoAcercademiComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'acercademi', component: BotonAcercadeComponent},
