@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from "@angular/common";
+import { Router } from "@angular/router";
+
 
 @Component({
   selector: 'app-boton-habilidades',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonHabilidadesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scroller: ViewportScroller, private router: Router) {}
+  ngOnInit() {
+    this.router.navigate(["/"]);
+  }
 
-  ngOnInit(): void {
+  irhabilidades() {
+    document.getElementById("habilidadesscroll")?.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
   }
 
 }

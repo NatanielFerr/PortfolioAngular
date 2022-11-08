@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from "@angular/common";
+import { Router } from "@angular/router";
+import { BehaviorSubject } from 'rxjs';
+
 
 @Component({
   selector: 'app-boton-educacion',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonEducacionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scroller: ViewportScroller, private router: Router) {}
+  ngOnInit() {
+    this.router.navigate(["/"]);
+  }
 
-  ngOnInit(): void {
+  ireducacion() {
+    document.getElementById("educacionscroll")?.scrollIntoView({
+      behavior: "smooth",
+      inline: "start",
+    });
   }
 
 }

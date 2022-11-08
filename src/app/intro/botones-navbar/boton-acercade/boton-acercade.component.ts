@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from "@angular/common";
+import { Router } from "@angular/router";
+import { top } from '@popperjs/core';
+
 
 @Component({
   selector: 'app-boton-acercade',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonAcercadeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scroller: ViewportScroller, private router: Router) {}
+  ngOnInit() {
+    this.router.navigate(["/"]);
+  }
 
-  ngOnInit(): void {
+  iracercademi() {
+    document.getElementById("acercademiscroll")?.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
   }
 
 }
