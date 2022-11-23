@@ -58,3 +58,16 @@ ul.boton-mas-menu{
     list-style: none;
     margin-left: 37rem;
 }
+
+ /* Sección Responsive */
+ @media screen and (max-width: 920px) {
+  nav,div{
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 36px 0px;
+  }
+  a{
+    margin-top: -8rem;
+    text-align: center;
+  }
+}

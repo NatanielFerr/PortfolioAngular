@@ -81,3 +81,25 @@
   .animate__rubberBand{
     transition: 1s ease-out;
   }
+
+   /* Sección Responsive */
+ @media screen and (max-width: 920px) {
+  nav,div{
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 36px 0px;
+  }
+  a{
+    margin-top: -8rem;
+    text-align: center;
+  }
+
+  div.responsive{
+    margin-top: 20rem;
+    position: relative;
+  }
+
+  label.responsive-2{
+    margin-bottom: 1.5rem;
+  }
+}

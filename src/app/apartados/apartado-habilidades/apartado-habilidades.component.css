@@ -372,3 +372,10 @@ div#porcentaje{
       opacity: 1;
       transform: rotate(360deg); } 
   }
+
+  /* Sección Responsive */
+  @media screen and (max-width: 920px) {
+   div.responsive{
+    margin-left: -2rem;
+   }
+    }
