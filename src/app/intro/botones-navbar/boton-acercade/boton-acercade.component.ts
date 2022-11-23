@@ -17,10 +17,10 @@ export class BotonAcercadeComponent implements OnInit {
   }
 
   iracercademi() {
-    document.getElementById("acercademiscroll")?.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
+    window.scroll({
+      top: 555,
+      behavior: "smooth"
+    })
   }
 
 }

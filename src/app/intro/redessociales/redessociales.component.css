@@ -22,3 +22,11 @@ a#boton-github,
 a#boton-twitter{
     color: #ffffff;
 }
+
+/* Sección Responsive */
+@media screen and (max-width : 800px){
+    ul{
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+  }

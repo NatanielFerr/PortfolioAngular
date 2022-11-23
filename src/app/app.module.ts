@@ -1,8 +1,14 @@
+
+//Importación de modulos
+import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-import { AppRoutingModule } from './app-routing.module';
+
+//Importación de componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './intro/navbar/navbar.component';
 import { RedessocialesComponent } from './intro/redessociales/redessociales.component';
@@ -58,6 +64,7 @@ import { BotonExperienciaComponent } from './intro/botones-navbar/boton-experien
 import { BotonEducacionComponent } from './intro/botones-navbar/boton-educacion/boton-educacion.component';
 import { BotonHabilidadesComponent } from './intro/botones-navbar/boton-habilidades/boton-habilidades.component';
 import { BotonContactoComponent } from './intro/botones-navbar/boton-contacto/boton-contacto.component';
+import { NavbarContactoComponent } from './contacto/navbar-contacto/navbar-contacto.component';
 
 @NgModule({
   declarations: [
@@ -116,10 +123,14 @@ import { BotonContactoComponent } from './intro/botones-navbar/boton-contacto/bo
     BotonEducacionComponent,
     BotonHabilidadesComponent,
     BotonContactoComponent,
+    NavbarContactoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

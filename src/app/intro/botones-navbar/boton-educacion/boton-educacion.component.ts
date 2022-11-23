@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewportScroller } from "@angular/common";
 import { Router } from "@angular/router";
-import { BehaviorSubject } from 'rxjs';
 
 
 @Component({
@@ -17,10 +16,9 @@ export class BotonEducacionComponent implements OnInit {
   }
 
   ireducacion() {
-    document.getElementById("educacionscroll")?.scrollIntoView({
-      behavior: "smooth",
-      inline: "start",
-    });
+    window.scroll({
+      top: 1040,
+      behavior: "smooth"
+    })
   }
-
 }

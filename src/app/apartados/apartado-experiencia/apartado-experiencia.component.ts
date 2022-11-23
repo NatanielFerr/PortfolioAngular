@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoService } from 'src/app/servicios/info.service';
+
 
 @Component({
   selector: 'app-apartado-experiencia',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApartadoExperienciaComponent implements OnInit {
 
-  constructor() { }
+  experiencia: any;
+
+  constructor(private infoService:InfoService) { }
 
   ngOnInit(): void {
+    this.infoService.getInformacion().subscribe(info =>{
+      // console.log(info);
+    this.experiencia = info.experiencia;
+    });
   }
 
 }

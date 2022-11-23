@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BotonContactoComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
 }

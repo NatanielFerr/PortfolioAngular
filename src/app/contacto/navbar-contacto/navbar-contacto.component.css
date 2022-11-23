@@ -1,3 +1,12 @@
+/*  Barra de navegación  */
+.navbar.navbar-expand-lg.bg-primary{
+    background: #8d12b9;
+    background: -moz-linear-gradient(90deg, #8d12b9 0%, #429cc1 50%, #a029d6 100%);
+    background: -webkit-linear-gradient(90deg, #8d12b9 0%, #429cc1 50%, #a029d6 100%);
+    background: linear-gradient(90deg, #8d12b9 0%, #429cc1 50%, #a029d6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8d12b9",endColorstr="#a029d6",GradientType=1);
+}
+
 /*  Menú barra nav  */
 .botones-menu{
     display: inline-block;
@@ -41,23 +50,11 @@
 }
 
 div#botones-lista{
-    padding-right:45rem;
+    padding-right:65rem;
     margin-top: 1.5rem;
 }
 
 ul.boton-mas-menu{
     list-style: none;
     margin-left: 37rem;
-}
-
-/* Sección Responsive */
-@media screen and (max-width : 920px){
-  div.responsive ul{
-    flex-wrap: wrap;
-    display: block !important;
-    margin-left: 2rem;
-  }
-  span{
-    margin-top: 1rem;
-  }
 }

@@ -16,10 +16,10 @@ export class BotonProyectosComponent implements OnInit {
   }
 
   irproyectos() {
-    document.getElementById("proyectoscroll")?.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
+   window.scroll({
+    top: 3905,
+    behavior: "smooth"
+   })
   }
 
 }

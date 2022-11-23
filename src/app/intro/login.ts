@@ -9,7 +9,7 @@ const icons = document.getElementById('#icons') as HTMLUListElement;
 
 const edicion = document.querySelectorAll('.java');
 let usuario: string = "admin";
-let contraseña: string = "admin";
+let contrasenia: string = "admin";
 function puro() {
     
 

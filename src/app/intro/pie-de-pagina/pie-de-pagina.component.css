@@ -9,7 +9,7 @@
   
   .pie-de-pagina .grupo-1{
     width: 100%;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -18,13 +18,13 @@
   }
   
   .pie-de-pagina .grupo-2{
-    padding: 15px 10px;
+    padding: 93,75% 62,5%;
     text-align: center;
     color: #ffffff;
   }
   
   .pie-de-pagina .grupo-2 small{
-    font-size: 15px;
+    font-size: 93,75%;
   }
   
   .pie-de-pagina .boton-descarga{

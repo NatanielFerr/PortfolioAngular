@@ -49,3 +49,12 @@ ul.boton-mas-menu{
     list-style: none;
     margin-left: 37rem;
 }
+
+@media screen and (max-width : 920px){
+  ul.responsive{
+    flex-wrap: wrap;
+    display: block !important;
+    margin-left: 0.5rem;
+    background-color: #ffffff;
+  }
+}

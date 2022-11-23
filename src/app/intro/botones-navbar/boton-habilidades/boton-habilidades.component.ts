@@ -16,10 +16,10 @@ export class BotonHabilidadesComponent implements OnInit {
   }
 
   irhabilidades() {
-    document.getElementById("habilidadesscroll")?.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
+  window.scroll({
+    top: 1220,
+    behavior: "smooth"
+  })
   }
 
 }

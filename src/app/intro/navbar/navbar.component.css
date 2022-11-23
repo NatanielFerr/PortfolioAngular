@@ -6,5 +6,16 @@
       background: linear-gradient(90deg, #8d12b9 0%, #429cc1 50%, #a029d6 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8d12b9",endColorstr="#a029d6",GradientType=1);
   }
-  
-  
+
+    /* Sección Responsive */
+    @media screen and (max-width: 920px) {
+      nav,div{
+          flex-wrap: wrap;
+          width: 100%;
+          padding: 36px 0px;
+      }
+      a{
+        margin-top: -6rem;
+        text-align: center;
+      }
+  }

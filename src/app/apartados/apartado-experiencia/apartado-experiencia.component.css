@@ -1,0 +1,31 @@
+div.row{
+    margin-top: -2%;
+    margin-bottom: 2.5%;
+}
+
+div#textonombre{
+    white-space: nowrap;
+    display:inline-table;
+ }
+
+ h4#fecha{
+    font: normal 17.3px 'Arvo', serif;
+}
+
+   /* Sección Responsive */
+   @media screen and (max-width: 920px) {
+    div.col-1, div.col-sm-10{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 20rem;
+        margin-bottom: -2rem;
+        position: relative;
+    }
+
+    div.col{
+        position: relative;
+        width: 20rem;
+        flex-wrap: nowrap;
+    }
+    
+}

@@ -1,11 +1,7 @@
 <!--                               Button Redes                                         -->
 <ul class="list-group list-group-horizontal">
-    <li class="list-group-item"><a id="boton-linkedin" target="_blank" href="https://www.linkedin.com/in/nataniel-alexandro-ferreyra-kus-347385246/"><i class="fa-brands fa-linkedin fa-2xl" data-bs-toggle="collapse"></i></a>
+    <div *ngFor="let redes of redes">
+    <li class="list-group-item"><a id="{{redes.denominacion}}" [href]="redes.link" target="_blank"><i ngClass="{{redes.logo}}" data-bs-toggle="collapse"></i></a>
     </li>
-    <li class="list-group-item"><a id="boton-instagram" target="_blank" href="https://www.instagram.com/nataniel.ferr/"><i class="fa-brands fa-instagram fa-2xl" data-bs-toggle="collapse"></i></a>
-    </li>
-    <li class="list-group-item"><a id="boton-github" target="_blank" href="https://github.com/NatanielFerr"><i class="fa-brands fa-github fa-2xl" data-bs-toggle="collapse"></i></a>
-    </li>
-    <li class="list-group-item"><a id="boton-twitter" target="_blank" href="https://twitter.com/NatanielFerrey1"><i class="fa-brands fa-twitter fa-2xl" data-bs-toggle="collapse"></i></a>
-    </li>
+</div>
 </ul>

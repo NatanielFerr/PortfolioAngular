@@ -63,7 +63,7 @@ div#borde{
 
 div#texto-para-ajustar{
     padding-left: 12%;
-    margin-top: 4%;
+    margin-top: 2.5%;
 }
 
 /*  Acomodo del tamaño de los modales  */
@@ -71,3 +71,4 @@ div#texto-para-ajustar{
   width: 130% !important;
   box-shadow: 0 0 20px 0 rgba(151, 57, 195, 0.631);
 }
+

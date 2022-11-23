@@ -9,3 +9,21 @@
 .cinzel-letter{
   font-family: 'Cinzel', serif;
 }
+
+  /* Sección Responsive */
+  @media screen and (max-width: 920px) {
+    div.col-3{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 11rem;
+    }
+    div.col{
+      text-align: center;
+      width: 20rem;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      position: relative;
+      flex-wrap: nowrap;
+  }
+    
+}
