@@ -1,6 +1,10 @@
 <!--                                Banner                                               -->
 <section id="imagen-del-banner" class="banner">
     <div>
+      <ul class="list-group botones-de-edicion banner list-group-horizontal">
+        <!--                          Button edit                                         -->
+      <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#BannerModal"></i></li>
+      </ul>
       <img [src]="imgbanner" width="100%" height="750vh" alt="...">
       <h1 class="texto-banner">{{bienvenida.bienvenida1}} <br> {{bienvenida.bienvenida2}} <br> 
         {{bienvenida.bienvenida3}}
