@@ -16,9 +16,8 @@ export class BotonEducacionComponent implements OnInit {
   }
 
   ireducacion() {
-    window.scroll({
-      top: 1040,
+    document.getElementById("educación")?.scrollIntoView({
       behavior: "smooth"
-    })
+    });
   }
 }

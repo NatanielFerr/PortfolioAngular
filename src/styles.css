@@ -7,11 +7,12 @@
 
 /*  Fuente General  */
 *{
-    font-family: 'Arvo', serif;
+    font-family: 'Arvo', serif
 }
 body{
     width: 100%;
     height: auto;
+    overflow-x: hidden;
 }
 
 /*  direcciones hacia las secciones scroll  */

@@ -14,7 +14,7 @@ export class ModalLoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { 
     this.form= this.formBuilder.group({
       email:['', [Validators.required, Validators.email]],
-      password:['',[Validators.required, Validators.maxLength(8), Validators.minLength(4)]],
+      password:['',[Validators.required, Validators.maxLength(12), Validators.minLength(4)]],
    })
 
   }
@@ -25,25 +25,26 @@ export class ModalLoginComponent implements OnInit {
   get Password(){
     return this.form.get("password");
   }
- 
-  get Mail(){
-   return this.form.get("email");
-  }
-
-  get PasswordValid(){
+  
+  get PasswordInvalid(){
     return this.Password?.touched && !this.Password?.valid;
   }
 
-  get MailValid() {
-    return false
+  get Mail(){
+   return this.form.get("email");
+  }
+  
+  get MailInvalid() {
+    return this.Mail?.touched && !this.Mail?.valid;
   }
 
-  onEnviar(event: Event){
+
+  onLogin(event: Event){
 
     event.preventDefault; 
  
     if (this.form.valid){
-      alert("Todo salio bien ¡Enviar formuario!")
+      
     }else{
       this.form.markAllAsTouched(); 
     }

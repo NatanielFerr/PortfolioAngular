@@ -16,10 +16,9 @@ export class BotonExperienciaComponent implements OnInit {
   }
 
   irexperiencia() {
-    window.scroll({
-      top:860,
+    document.getElementById("experiencia")?.scrollIntoView({
       behavior: "smooth"
-    })
+    });
   }
 
 }

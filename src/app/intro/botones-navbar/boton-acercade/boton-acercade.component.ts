@@ -17,10 +17,9 @@ export class BotonAcercadeComponent implements OnInit {
   }
 
   iracercademi() {
-    window.scroll({
-      top: 555,
+    document.getElementById("información")?.scrollIntoView({
       behavior: "smooth"
-    })
+    });
   }
 
 }

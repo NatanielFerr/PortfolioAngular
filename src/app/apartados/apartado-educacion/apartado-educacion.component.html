@@ -11,7 +11,7 @@
         <li class="list-group-item"><i class="fa-solid fa-x fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#DeleteEducaciónModal"></i></li>
         </ul>
     <div id="borde" class="col-1 text-perfil">
-      <div id="textonivel" class="col-sm-10"><img [src]="educacion.img"  [style.width.px]="educacion.tamanio">
+      <div id="textonivel" class="col-sm-10"><a id="link" [href]="educacion.link" target="_blank"><img [src]="educacion.img"  width="155px"></a>
         <div class="mt-2">
         <h4>{{educacion.nivel}}</h4>
         <h4 id="fecha">{{educacion.inicio}} {{educacion.fin}}</h4>

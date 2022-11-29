@@ -46,11 +46,12 @@
             "nombre": "Instalacion de pc",
             "descripcion_cargo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, natus. Ipsum tempore fuga in alias maxime temporibus harum quasi officiis dolor dolores magnam dignissimos assumenda vel, repellendus aliquid, quia praesentium?",
             "logo":"./assets/img/Nataniel.F- (6).png",
-            "tamanio" : "155",
             "cargo":"protector",
             "inicio":"",
             "fin":"",
-            "actual":"trabajo actual"
+            "actual":"trabajo actual",
+            "link":""
+
         }
 ],
 
@@ -61,10 +62,11 @@
             "inicio": "02/05/22 - ",
             "fin": "02/07/22",
             "nivel": "Se Programar",
+            "institucion":"",
             "img": "./assets/img/Nataniel.F- (6).png",
-            "tamanio" : "155", 
-            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, natus. Ipsum tempore fuga in alias maxime temporibus harum quasi officiis dolor dolores magnam dignissimos assumenda vel, repellendus aliquid, quia praesentium?"
-            
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, natus. Ipsum tempore fuga in alias maxime temporibus harum quasi officiis dolor dolores magnam dignissimos assumenda vel, repellendus aliquid, quia praesentium?",
+            "link":""
+
         },
         {
             "id" : 2,
@@ -73,7 +75,8 @@
             "nivel": "Yo Programo",
             "img": "./assets/img/Nataniel.F- (6).png",
             "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, natus. Ipsum tempore fuga in alias maxime temporibus harum quasi officiis dolor dolores magnam dignissimos assumenda vel, repellendus aliquid, quia praesentium?",
-            "tamanio" : "155"
+            "link":""
+
         },
         {
             "id" : 3,
@@ -82,7 +85,8 @@
             "nivel": "Yo Programo",
             "img": "./assets/img/Nataniel.F- (6).png",
             "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, natus. Ipsum tempore fuga in alias maxime temporibus harum quasi officiis dolor dolores magnam dignissimos assumenda vel, repellendus aliquid, quia praesentium?",
-            "tamanio" : "155"
+            "link":""
+
         }
     ],
 
@@ -91,41 +95,36 @@
             "id":1,
             "nombre":"html",
             "logo":"./assets/img/html-5-logo-svgrepo-com.svg",
-            "tamanio": "78",
-            "color":"progress-1",
-            "porcentaje":"1%"
+            "porcentaje":"1",
+            "porcentaje_titulo":"1%"
         },
         {
             "id":2,
             "nombre":"javascript",
             "logo":"",
-            "tamanio": "78",
-            "color":"progress-2",
-            "porcentaje":"2%"
+            "porcentaje":"2",
+            "porcentaje_titulo":"2%"
         },
         {
             "id":3,
             "nombre":"css",
             "logo":"",
-            "tamanio": "78",
-            "color":"progress-3",
-            "porcentaje":"3%"
+            "porcentaje":"3",
+            "porcentaje_titulo":"3%"
         },
         {
             "id":4,
             "nombre":"angular",
             "logo":"",
-            "tamanio": "78",
-            "color":"progress-4",
-            "porcentaje":"4%"
+            "porcentaje":"4",
+            "porcentaje_titulo":"4%"
         },
         {
             "id":5,
             "nombre":"ingles",
             "logo":"",
-            "tamanio": "78",
-            "color":"progress-5",
-            "porcentaje":"5%"
+            "porcentaje":"5",
+            "porcentaje_titulo":"5%"
         }
 
     ],
@@ -139,7 +138,8 @@
             "tamanio":"155",
             "cargo":"",
             "inicio":"",
-            "fin":""
+            "fin":"",
+            "link":""
             
         }
     ],

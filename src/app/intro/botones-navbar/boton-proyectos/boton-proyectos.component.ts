@@ -16,10 +16,9 @@ export class BotonProyectosComponent implements OnInit {
   }
 
   irproyectos() {
-   window.scroll({
-    top: 3905,
-    behavior: "smooth"
-   })
+    document.getElementById("proyectos")?.scrollIntoView({
+      behavior: "smooth"
+    });
   }
 
 }

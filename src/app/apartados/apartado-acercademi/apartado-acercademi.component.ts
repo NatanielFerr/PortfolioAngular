@@ -19,7 +19,7 @@ export class ApartadoAcercademiComponent implements OnInit {
 
   ngOnInit(): void {
     this.infoService.getInformacion().subscribe(info =>{
-      console.log(info);
+      //console.log(info);
       this.nombre = info.nombre;
       this.apellido = info.apellido;
       this.sobremi = info.sobremi;

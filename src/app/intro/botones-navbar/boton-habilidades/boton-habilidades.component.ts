@@ -16,10 +16,9 @@ export class BotonHabilidadesComponent implements OnInit {
   }
 
   irhabilidades() {
-  window.scroll({
-    top: 1220,
-    behavior: "smooth"
-  })
+    document.getElementById("habilidades")?.scrollIntoView({
+      behavior: "smooth"
+    });
   }
 
 }

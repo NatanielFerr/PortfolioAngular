@@ -12,7 +12,7 @@
         </ul>
   <div id="texto-para-ajustar" class="col text-perfil text-start responsive">
     <div id="moverprogresos" class="progress-circle-container">
-      <div *ngFor="let habilidades of habilidades" class="progress-circle mb-5" ngClass="{{habilidades.color}}"><span> <img [src]="habilidades.logo" [style.width.px]="habilidades.tamanio"> <div id="porcentaje">{{habilidades.nombre}} {{habilidades.porcentaje}}</div></span>
+      <div *ngFor="let habilidades of habilidades" class="progress-circle mb-5" class="progress-{{habilidades.porcentaje}}"><span> <img [src]="habilidades.logo" width="78px"> <div id="porcentaje">{{habilidades.nombre}} {{habilidades.porcentaje_titulo}}</div></span>
       </div>  
     </div>
   </div>
