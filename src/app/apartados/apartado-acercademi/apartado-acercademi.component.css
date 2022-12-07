@@ -67,7 +67,7 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
 
   /* Sección Responsive */
   @media screen and (max-width: 920px) {
-    div.col-3{
+    div.col-3, div.col-sm-10{
         flex-wrap: nowrap;
         text-align: center;
         width: 11rem;
@@ -80,7 +80,8 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
       margin-bottom: 2rem;
       position: relative;
       flex-wrap: nowrap;
-      margin-top: 1rem;
+      margin-top: 0.2rem;
+      margin-left: 0.5rem;
   }
     
 }

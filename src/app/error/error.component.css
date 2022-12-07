@@ -26,4 +26,9 @@ html,body{margin-bottom: 0%}
 .ripple{background-position:center; transition:background 0.8s}
 .ripple:hover{background:#37474F radial-gradient(circle,transparent 1%,#263238 1%) center/15000%}
 .ripple:active{background-color:#37474F;background-size:100%;transition:background 0s}
-@media (min-width:768px){.arlinacode__title{font-size:3.4rem;margin:0 auto 20px auto}.arlinacode__text{font-size:1.5rem}}
+@media (min-width:768px){.arlinacode__title{font-size:3.4rem;margin:0 auto 20px auto}.arlinacode__text{font-size:1.5rem}};
+*{
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}

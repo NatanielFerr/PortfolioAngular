@@ -1,29 +1,31 @@
-<div class="row">
-  <div class="col-3">
-    <ul class="list-group botones-de-edicion edicion-perfil list-group-horizontal">
-      <!--                          Button edit                                         -->
-    <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#PerfilModal"></i></li>
-    </ul>
-  <img [src]="imgperfil" class="rounded-circle w-75" alt="..." title="...">
-  <ul class="list-group botones-de-edicion edicion-perfil-nombre list-group-horizontal">
-    <!--                          Button edit                                         -->
-  <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#PerfilNombreModal"></i></li>
-  </ul>
-  <h2 class="modal-title fw-semibold">{{nombre}} {{apellido}}</h2>
-  <h4 class="modal-title cinzel-letter">{{titulo}}</h4>
-</div>
-<div class="col pt-md-5 text-perfil">
   <div class="row">
-    <h2 class="d-inline">Acerca De Mi</h2>
-  <div class="text-justify-content">
-    <ul class="list-group botones-de-edicion edicion-perfil-acercade list-group-horizontal">
+    <div class="col-3">
+      <ul class="list-group botones-de-edicion edicion-perfil list-group-horizontal">
+        <!--                          Button edit                                         -->
+      <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#PerfilModal"></i></li>
+      </ul>
+    <img [src]="imgperfil" class="rounded-circle w-75" alt="..." title="...">
+    <ul class="list-group botones-de-edicion edicion-perfil-nombre list-group-horizontal">
       <!--                          Button edit                                         -->
-    <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#EditAcercaDeModal"></i></li>
-      <!--                          Button Delete                                       -->
-    <li class="list-group-item"><i class="fa-solid fa-x fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#DeleteAcercaDeModal"></i></li>
+    <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#PerfilNombreModal"></i></li>
     </ul>
-    <h5 class="d-inline">{{sobremi}}</h5>
+    <h2 class="modal-title fw-semibold">{{nombre}} {{apellido}}</h2>
+    <h4 class="modal-title cinzel-letter">{{titulo}}</h4>
   </div>
-</div> 
-</div>
-</div>
+  <div class="col pt-md-5 text-perfil">
+    <div class="row">
+      <h2 class="d-inline">Acerca De Mi</h2>
+    <div class="text-justify-content">
+      <ul class="list-group botones-de-edicion edicion-perfil-acercade list-group-horizontal">
+        <!--                          Button edit                                         -->
+      <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#EditAcercaDeModal"></i></li>
+        <!--                          Button Delete                                       -->
+      <li class="list-group-item"><i class="fa-solid fa-x fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#DeleteAcercaDeModal"></i></li>
+      </ul>
+      <div class="col">
+      <h5 class="d-inline">{{sobremi}}</h5>
+    </div>
+    </div>
+  </div> 
+  </div>
+  </div>
