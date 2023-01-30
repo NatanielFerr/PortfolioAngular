@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoService } from 'src/app/servicios/info.service';
+import { Persona } from 'src/app/models/persona';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 
 @Component({
@@ -9,22 +11,31 @@ import { InfoService } from 'src/app/servicios/info.service';
 })
 export class ApartadoAcercademiComponent implements OnInit {
 
-  nombre : string = '';
-  apellido : string = '';
-  sobremi : string = '';
-  titulo : string = '';
-  imgperfil: any = '';
+  // nombre : string = '';
+  // apellido : string = '';
+  // sobremi : string = '';
+  // titulo : string = '';
+  // imgperfil: any = '';
+  personas : Persona[]=[];
 
-  constructor(private infoService:InfoService) { }
+  constructor(private authService: AuthService, private sPersona:PersonaService) { }
 
   ngOnInit(): void {
-    this.infoService.getInformacion().subscribe(info =>{
-      //console.log(info);
-      this.nombre = info.nombre;
-      this.apellido = info.apellido;
-      this.sobremi = info.sobremi;
-      this.titulo = info.titulo;
-      this.imgperfil = info.img_perfil;
+    // this.infoService.getInformacion().subscribe(info =>{
+      
+    //   this.nombre = info.nombre;
+    //   this.apellido = info.apellido;
+    //   this.sobremi = info.sobremi;
+    //   this.titulo = info.titulo;
+    //   this.imgperfil = info.img_perfil;
+    // });
+    this.cargarPersona();
+  }
+
+  cargarPersona():void {
+    this.sPersona.verpersonas().subscribe(data =>{
+      this.personas = data;
+      console.log(data);
     });
   }
 

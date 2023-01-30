@@ -3,7 +3,7 @@
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -65,6 +65,10 @@ import { BotonEducacionComponent } from './intro/botones-navbar/boton-educacion/
 import { BotonHabilidadesComponent } from './intro/botones-navbar/boton-habilidades/boton-habilidades.component';
 import { BotonContactoComponent } from './intro/botones-navbar/boton-contacto/boton-contacto.component';
 import { NavbarContactoComponent } from './contacto/navbar-contacto/navbar-contacto.component';
+import { ModalRedesAddComponent } from './modals/modal-redes-add/modal-redes-add.component';
+import { ModalHabilidadesAddComponent } from './modals/modal-habilidades-add/modal-habilidades-add.component';
+import { ModalProyectosAddComponent } from './modals/modal-proyectos-add/modal-proyectos-add.component';
+import { InterceptorService } from './servicios/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -124,6 +128,9 @@ import { NavbarContactoComponent } from './contacto/navbar-contacto/navbar-conta
     BotonHabilidadesComponent,
     BotonContactoComponent,
     NavbarContactoComponent,
+    ModalRedesAddComponent,
+    ModalHabilidadesAddComponent,
+    ModalProyectosAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -132,7 +139,7 @@ import { NavbarContactoComponent } from './contacto/navbar-contacto/navbar-conta
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [InterceptorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

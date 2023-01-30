@@ -7,10 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class InfoService {
+  url:string = "http://localhost:8080/personas/ver/personas";
 
   constructor(private http:HttpClient) { }
 
   getInformacion():Observable<any>{
-    return this.http.get('./assets/json/info.json');
+    return this.http.get<any>(this.url);
   }
 }

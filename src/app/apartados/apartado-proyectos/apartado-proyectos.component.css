@@ -73,3 +73,24 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
     
 }
 
+@media screen and (max-width: 900px) {
+  ul.edicion-experiencia-y-otros{
+   margin-left: -36rem;
+  }
+  .fa-xl {
+    font-size: 1.5rem;
+    line-height: .04167em;
+    vertical-align: -0.125em;
+}
+}
+@media screen and (max-width: 500px) {
+  ul.edicion-experiencia-y-otros{
+   margin-left: -57rem;
+  }
+  .fa-xl {
+    font-size: 1.5rem;
+    line-height: .04167em;
+    vertical-align: -0.125em;
+}
+}
+

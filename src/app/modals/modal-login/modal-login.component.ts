@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Persona } from 'src/app/models/persona';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 
 @Component({
@@ -10,24 +14,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ModalLoginComponent implements OnInit {
 
   form!: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) { 
+  personas : Persona[]=[];
+  persona = new Persona("","","","","","","","");
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private ruta: Router, private sPersona : PersonaService) { 
     this.form= this.formBuilder.group({
       email:['', [Validators.required, Validators.email]],
-      password:['',[Validators.required, Validators.maxLength(12), Validators.minLength(4)]],
+      contrasenia:['',[Validators.required, Validators.maxLength(12), Validators.minLength(4)]],
    })
 
   }
 
   ngOnInit(): void {
+    this.cargarPersona();
   }
 
-  get Password(){
-    return this.form.get("password");
+  get Contrasenia(){
+    return this.form.get("contrasenia");
   }
   
-  get PasswordInvalid(){
-    return this.Password?.touched && !this.Password?.valid;
+  get ContraseniaInvalid(){
+    return this.Contrasenia?.touched && !this.Contrasenia?.valid;
   }
 
   get Mail(){
@@ -37,7 +43,6 @@ export class ModalLoginComponent implements OnInit {
   get MailInvalid() {
     return this.Mail?.touched && !this.Mail?.valid;
   }
-
 
   onLogin(event: Event){
 
@@ -51,4 +56,25 @@ export class ModalLoginComponent implements OnInit {
  
   }
 
+  cargarPersona():void {
+    this.sPersona.verpersonas().subscribe(data =>{
+      this.personas = data;
+    });
+  }
+  
+  onEnviarlogin(event:Event){
+    event.preventDefault;
+    if (this.form.valid){
+    this.authService.IniciarSesion(this.form.value).subscribe(data =>{
+    
+      console.log("DATA: " + JSON.stringify(data));
+      window.location.reload();
+    
+    }),
+      () =>{
+      window.location.reload();
+    }
+    }
+  }
+  
 }

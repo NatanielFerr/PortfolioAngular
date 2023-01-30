@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Habilidad } from 'src/app/models/habilidad';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { HabilidadService } from 'src/app/servicios/habilidad.service';
 import { InfoService } from 'src/app/servicios/info.service';
 
 
@@ -8,15 +13,141 @@ import { InfoService } from 'src/app/servicios/info.service';
   styleUrls: ['./apartado-habilidades.component.css']
 })
 export class ApartadoHabilidadesComponent implements OnInit {
-habilidades: any;
+modoEdicion: any;
+habilidades: Habilidad[]=[];
+Listahabilidades: any;
 
-  constructor(private infoService:InfoService) { }
+//Modal habilidades edit//
+form: FormGroup;
+  habi = new Habilidad("","",0,1);
+  nombre: '';
+  logo: any;
+  porcentaje: any;
+  personaid: number = 1 ;
+  constructor(private authService: AuthService, private sHabilidad:HabilidadService, 
+    private formBuilder: FormBuilder,
+    private activatedRoute:ActivatedRoute , private router: Router) { 
+      //Modal habilidades edit//
+      this.form = this.formBuilder.group({
+        id:[''],
+        nombre:['',[Validators.required]],
+        porcentaje:['',[Validators.required, Validators.min(0), Validators.max(100)]],
+        porcentaje_titulo:[''],
+        logo:[''],
+        personaid:['']
+      }) 
+    }
 
   ngOnInit(): void {
-    this.infoService.getInformacion().subscribe(info =>{
-      console.log(info);
-    this.habilidades = info.habilidades;
+    this.cargarHabilidad();
+    // this.infoService.getInformacion().subscribe(info =>{
+    // console.log(info);
+    // this.habilidad = info.habilidad;
+    
+    
+    if (sessionStorage.getItem('currentUser') == "null"){
+      this.modoEdicion = false;
+    } else if (sessionStorage.getItem('currentUser') == null){
+      this.modoEdicion = false;
+    } else{
+      this.modoEdicion = true;
+    }
+  
+  // });
+  }
+
+  cargarHabilidad():void {
+    this.sHabilidad.lista().subscribe(data =>{
+      console.log(data);
+      this.habilidades = data;
     });
   }
+
+//Modal habilidades edit//
+get Nombre(){
+  return this.form.get("nombre");
+}
+
+get Porcentaje(){
+  return this.form.get("porcentaje");
+}
+
+get NombreValid(){
+  return this.Nombre?.touched && !this.Nombre.valid;
+}
+
+get PorcentajeValid(){
+  return this.Porcentaje?.touched && !this.Porcentaje.valid;
+}
+
+get Logo(){
+  return this.form.get("logo");
+}
+
+get Personaid(){
+  return this.form.get("personaid");
+}
+
+
+onUpdate():void{
+  let habi = this.form.value;
+    this.sHabilidad.update(habi.id, habi).subscribe(
+      data => {
+        alert('Habilidad editada correctamente');
+        window.location.reload();
+        this.form.reset();
+      },
+      error => {
+        alert('Falló al editar la habilidad, intente nuevamente');
+        window.location.reload();
+        this.form.reset();
+      })
+  }
+
+  detail(id:number){
+    this.sHabilidad.detail(id).subscribe(data =>{
+      this.form.setValue(data);
+      console.log(data);
+    })
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if (this.form.valid){
+      this.onUpdate();
+    }else{
+      alert("falló en la carga, intente nuevamente");
+      this.form.markAllAsTouched();
+    }
+  }
+
+  cerrar():void{
+    window.location.reload();
+  }
+
+  limpiar():void{
+    this.form.reset();
+  }
+
+
+
+  // idEdit(id:number){
+  //     this.sHabilidad.detail(id).subscribe(data =>{
+  //       console.log(data);
+  //     })
+  // }
+
+  delete(id: number) {
+  this.sHabilidad.delete(id).subscribe(
+    error => {
+      alert("falló al eliminar la habilidad, intente nuevamente");
+      this.cargarHabilidad();
+    },
+    data => {
+      alert("La habilidad fue eliminada correctamente");
+      this.cargarHabilidad();
+    }
+  )
+}
 
 }

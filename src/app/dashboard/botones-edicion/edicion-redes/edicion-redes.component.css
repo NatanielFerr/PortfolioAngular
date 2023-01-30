@@ -1,3 +1,13 @@
+/*  botones agregar dashboard     */
+i.fa-solid.fa-plus.fa-xl{
+  display: block;
+  color: #36ceb2;
+}
+
+i.fa-solid.fa-plus.fa-xl:hover{
+  transform: scale(120%);
+}
+
 /*  botones de edición dashboard  */
 i.fa-solid.fa-pen-to-square.fa-xl{
   display: block;

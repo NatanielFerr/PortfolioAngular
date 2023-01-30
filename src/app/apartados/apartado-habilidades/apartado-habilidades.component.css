@@ -376,7 +376,21 @@ div#porcentaje{
   /*  edición experiencia y los demas apartados  */
 ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
   margin-top: 0.5rem;
-  padding-left: 73rem;
+    padding-left: 73rem;
+}
+
+/* Botones de agregar dashboard*/
+i.fa-solid.fa-plus.fa-xl{
+  display: block;
+  color: #36ceb2;
+}
+i.fa-solid.fa-plus.fa-xl{
+  transform: scale(120%);
+}
+
+li.list-group-item.add{
+  margin-top: -1.7rem;
+  padding-left: 55rem;
 }
 
 /*  botones de edición dashboard  */
@@ -419,4 +433,25 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
    div.responsive{
     margin-left: -2rem;
    }
+    }
+
+    @media screen and (max-width: 900px) {
+      ul.edicion-experiencia-y-otros{
+       margin-left: -36rem;
+      }
+      .fa-xl {
+        font-size: 1.5rem;
+        line-height: .04167em;
+        vertical-align: -0.125em;
+    }
+    }
+    @media screen and (max-width: 500px) {
+      ul.edicion-experiencia-y-otros{
+       margin-left: -57rem;
+      }
+      .fa-xl {
+        font-size: 1.5rem;
+        line-height: .04167em;
+        vertical-align: -0.125em;
+    }
     }
