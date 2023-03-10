@@ -54,6 +54,7 @@ div#porcentaje{
     line-height: 115px;
     margin-top: -25px;
     text-align: center;
+    white-space: nowrap;
     z-index: 1;
 }
 
@@ -375,8 +376,8 @@ div#porcentaje{
 
   /*  edición experiencia y los demas apartados  */
 ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
-  margin-top: 0.5rem;
-    padding-left: 73rem;
+  margin-top: -1.40rem;
+    padding-left: 5.6rem;
 }
 
 /* Botones de agregar dashboard*/
@@ -384,13 +385,13 @@ i.fa-solid.fa-plus.fa-xl{
   display: block;
   color: #36ceb2;
 }
-i.fa-solid.fa-plus.fa-xl{
+i.fa-solid.fa-plus.fa-xl:hover{
   transform: scale(120%);
 }
 
-li.list-group-item.add{
+button.list-group-item.add{
   margin-top: -1.7rem;
-  padding-left: 55rem;
+  padding-left: 77rem;
 }
 
 /*  botones de edición dashboard  */
@@ -437,7 +438,7 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
 
     @media screen and (max-width: 900px) {
       ul.edicion-experiencia-y-otros{
-       margin-left: -36rem;
+       margin-left: -1rem;
       }
       .fa-xl {
         font-size: 1.5rem;
@@ -447,7 +448,7 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
     }
     @media screen and (max-width: 500px) {
       ul.edicion-experiencia-y-otros{
-       margin-left: -57rem;
+       margin-left: 2rem;
       }
       .fa-xl {
         font-size: 1.5rem;
@@ -455,3 +456,22 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
         vertical-align: -0.125em;
     }
     }
+
+     /* Sección Responsive Modal Edit */
+ @media screen and (max-width: 810px) {
+  div.modal-content{
+      max-width: 100%;
+  }
+div.modal{
+  flex-wrap: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+div.col-sm-10{
+  margin-left: 0.5rem;
+}
+div.modal-footer{
+  margin-left: 4rem;
+}
+}

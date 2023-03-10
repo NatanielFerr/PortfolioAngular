@@ -69,6 +69,8 @@ import { ModalRedesAddComponent } from './modals/modal-redes-add/modal-redes-add
 import { ModalHabilidadesAddComponent } from './modals/modal-habilidades-add/modal-habilidades-add.component';
 import { ModalProyectosAddComponent } from './modals/modal-proyectos-add/modal-proyectos-add.component';
 import { InterceptorService } from './servicios/interceptor.service';
+import { ModalExperienciaAddComponent } from './modals/modal-experiencia-add/modal-experiencia-add.component';
+import { ModalEducacionAddComponent } from './modals/modal-educacion-add/modal-educacion-add.component';
 
 @NgModule({
   declarations: [
@@ -131,6 +133,8 @@ import { InterceptorService } from './servicios/interceptor.service';
     ModalRedesAddComponent,
     ModalHabilidadesAddComponent,
     ModalProyectosAddComponent,
+    ModalExperienciaAddComponent,
+    ModalEducacionAddComponent,
   ],
   imports: [
     BrowserModule,

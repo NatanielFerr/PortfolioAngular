@@ -1,5 +1,4 @@
 div.row{
-    margin-top: -2%;
     margin-bottom: 2.5%;
 }
 
@@ -17,6 +16,20 @@ ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizont
     margin-top: 0.5rem;
     padding-left: 73rem;
   }
+
+/* Botones de agregar dashboard*/
+i.fa-solid.fa-plus.fa-xl{
+  display: block;
+  color: #36ceb2;
+}
+i.fa-solid.fa-plus.fa-xl:hover{
+  transform: scale(120%);
+}
+
+button.list-group-item.add{
+  margin-top: -1.7rem;
+  padding-left: 77rem;
+}
 
   /*  botones de edición dashboard  */
 i.fa-solid.fa-pen-to-square.fa-xl{
@@ -53,6 +66,9 @@ i.fa-solid.fa-x.fa-xl:hover{
 ul.list-group.botones-de-edicion.list-group-horizontal {
   position: absolute;
 }
+
+/* Edicion Modal Parte Actual */
+
 
    /* Sección Responsive */
    @media screen and (max-width: 920px) {

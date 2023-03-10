@@ -7,10 +7,11 @@ export class Experiencia {
     descripcion_cargo : string;
     logo : string;
     link : string;
-    actual : boolean;
+    actual : string;
+    personaid: number;
 
     constructor(cargo : string,inicio : string,fin : string,descripcion_cargo : string,
-    logo : string,link : string,actual : boolean, nombre : string){
+    logo : string,link : string,actual : string, nombre : string,personaid: number){
         this.cargo = cargo;
         this.nombre = nombre;
         this.inicio = inicio;
@@ -19,5 +20,6 @@ export class Experiencia {
         this.logo = logo;
         this.link = link;
         this.actual = actual;
+        this.personaid = personaid;
     }
 }

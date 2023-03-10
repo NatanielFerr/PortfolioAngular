@@ -10,7 +10,7 @@ import { PersonaService } from 'src/app/servicios/persona.service';
   styleUrls: ['./apartado-acercademi.component.css']
 })
 export class ApartadoAcercademiComponent implements OnInit {
-
+  modoEdicion: any;
   // nombre : string = '';
   // apellido : string = '';
   // sobremi : string = '';
@@ -30,6 +30,13 @@ export class ApartadoAcercademiComponent implements OnInit {
     //   this.imgperfil = info.img_perfil;
     // });
     this.cargarPersona();
+    if (sessionStorage.getItem('currentUser') == "null"){
+      this.modoEdicion = false;
+    } else if (sessionStorage.getItem('currentUser') == null){
+      this.modoEdicion = false;
+    } else{
+      this.modoEdicion = true;
+    }
   }
 
   cargarPersona():void {

@@ -48,15 +48,17 @@ export class ApartadoProyectosComponent implements OnInit {
     this.idEditar = id;
   }
 
-  delete(id:number){
-    if(id != undefined){
-      this.sProye.delete(id).subscribe(
-        data =>{
-          this.cargarProyecto();
-        }, err =>{
-          alert("no se pudo eliminar el proyecto")
-        })
-    }}
+  delete(id: number) {
+    this.sProye.delete(id).subscribe(
+      error => {
+        alert("Falló al eliminar el proyecto, intente nuevamente");
+        this.cargarProyecto();
+      },
+      data => {
+        alert("El proyecto fue eliminado correctamente");
+        this.cargarProyecto();
+      }
+    )}
 
 
 }

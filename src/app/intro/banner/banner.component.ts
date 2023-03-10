@@ -11,7 +11,7 @@ import { PersonaService } from 'src/app/servicios/persona.service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-
+  modoEdicion: any;
 // imgbanner : any = '';
 // bienvenida : any = '';
 personas : Persona[]=[];
@@ -25,6 +25,13 @@ personas : Persona[]=[];
     //   this.bienvenida = info;
     // });
     this.cargarPersona();
+    if (sessionStorage.getItem('currentUser') == "null"){
+      this.modoEdicion = false;
+    } else if (sessionStorage.getItem('currentUser') == null){
+      this.modoEdicion = false;
+    } else{
+      this.modoEdicion = true;
+    }
   }
 
   cargarPersona():void {

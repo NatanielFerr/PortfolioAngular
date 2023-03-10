@@ -13,7 +13,7 @@
         {
             "id":1,
             "nombre":"Linkedin",
-            "logo":"fa-brands fa-linkedin fa-2xl",
+            "logo":"linkedin",
             "link":"https://www.linkedin.com/in/nataniel-alexandro-ferreyra-kus-347385246/",
             "denominacion":"boton-linkedin"
         },

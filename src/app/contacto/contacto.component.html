@@ -9,26 +9,26 @@
           <div class="contact-wrapper">
             <div class="contact-form">
               <h2>Contact Me</h2>
-              <form action="">
+              <form (ngSubmit)="Send()" novalidate #f="ngForm" action="">
                 <p>
                   <label>Nombre Y Apellido</label>
-                  <input type="text" name="nombre y apellido">
+                  <input type="text" [(ngModel)]="nombre_y_apellido" name="nombre_y_apellido">
                 </p>
                 <p>
                   <label class="responsive-2">Email</label>
-                  <input type="email" name="email">
+                  <input type="email" [(ngModel)]="email" name="email">
                 </p>
                 <p>
                   <label>Telefono</label>
-                  <input type="tel" name="telefono">
+                  <input type="tel" [(ngModel)]="telefono" name="telefono">
                 </p>
                 <p>
                   <label>Asunto</label>
-                  <input type="text" name="asunto">
+                  <input type="text" [(ngModel)]="asunto" name="asunto">
                 </p>
                 <p class="block">
                   <label>Mensaje</label>
-                  <textarea name="mensaje" rows="3"></textarea>
+                  <textarea [(ngModel)]="mensaje" name="mensaje" rows="3"></textarea>
                 </p>
                 <p class="block">
                   <button type="submit">

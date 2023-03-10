@@ -17,8 +17,7 @@ export class ModalHabilidadesAddComponent implements OnInit {
   porcentaje: any;
   personaid: number = 1 ;
 
-  constructor(private formBuilder: FormBuilder, private sHabilidad: HabilidadService, 
-    private activatedRoute:ActivatedRoute,private router:Router) {
+  constructor(private formBuilder: FormBuilder, private sHabilidad: HabilidadService) {
     this.form = this.formBuilder.group({
       id:[''],
       nombre:['',[Validators.required]],
@@ -91,7 +90,7 @@ onCreate():void{
   if (habilidad.id == '') {
     this.sHabilidad.save(habilidad).subscribe(
        error =>{
-        alert("Falló al agregar la habilidad, intente nuevamente");
+        alert();
         this.form.reset();
         window.location.reload();
       },
@@ -124,7 +123,7 @@ onEnviar(event:Event){
   if (this.form.valid){
     this.onCreate();
   }else{
-    alert("falló en la carga de la habilidad, intente nuevamente");
+    alert("Falló al agregar la habilidad, intente nuevamente");
     this.form.markAllAsTouched();
   }
 }

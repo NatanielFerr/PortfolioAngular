@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Experiencia } from 'src/app/models/experiencia';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
@@ -13,17 +14,41 @@ import { InfoService } from 'src/app/servicios/info.service';
 export class ApartadoExperienciaComponent implements OnInit {
 
   modoEdicion: any;
-  isTrue: boolean = false;
-  idEditar: number = 0;
   experiencias: Experiencia[]=[];
   Listaexperiencias: any;
-  isLogged: boolean = false;
 
-  constructor(private authService: AuthService, private sExperiencia: ExperienciaService) { }
+  //Modal experiencias edit//
+  form: FormGroup;
+  expe = new Experiencia("","","","","","","","",1);
+    nombre : '';
+    cargo : '';
+    inicio : '';
+    fin : '';
+    descripcion_cargo : '';
+    logo : any;
+    link : '';
+    actual : '';
+    personaid: number = 1 ;
+
+  constructor(private authService: AuthService, private sExperiencia:ExperienciaService, 
+    private formBuilder: FormBuilder) {
+      //Modal habilidades edit//
+      this.form = this.formBuilder.group({
+        id:[''],
+        nombre:['',[Validators.required]],
+        cargo:['',[Validators.required]],
+        inicio:['',[Validators.required]],
+        fin:[''],
+        descripcion_cargo:['',[Validators.required]],
+        logo:[''],
+        link:[''],
+        actual:[''],
+        personaid:['']
+      }) 
+     }
 
   ngOnInit(): void {
     this.cargarExperiencia();
-    
     if (sessionStorage.getItem('currentUser') == "null"){
       this.modoEdicion = false;
     } else if (sessionStorage.getItem('currentUser') == null){
@@ -31,19 +56,15 @@ export class ApartadoExperienciaComponent implements OnInit {
     } else{
       this.modoEdicion = true;
     }
-  //   this.infoService.getInformacion().subscribe(info =>{
-  //     // console.log(info);
-  //   this.experiencia = info.experiencia;
-    
-  //   if (sessionStorage.getItem('currentUser') == "null"){
-  //     this.modoEdicion = false;
-  //   } else if (sessionStorage.getItem('currentUser') == null){
-  //     this.modoEdicion = false;
-  //   } else{
-  //     this.modoEdicion = true;
-  //   }
-  
-  // });
+ 
+  }
+
+  trabajoActual():void{
+    if (this.actual !== ''){
+      "No"
+    }else{
+      "Trabajo actual"
+    };
   }
 
   cargarExperiencia():void {
@@ -53,24 +74,104 @@ export class ApartadoExperienciaComponent implements OnInit {
     });
   }
 
-  idEdit(id:number){
-    this.isTrue = true;
-    this.idEditar = id;
-    var elem = document.getElementById('nombre');
-    
+  //Modal habilidades edit//
+get Nombre(){
+  return this.form.get("nombre");
+}
 
-    elem?.setAttribute("value", this.Listaexperiencias[id].id);
+get NombreValid(){
+  return this.Nombre?.touched && !this.Nombre.valid;
+}
 
+get Cargo(){
+  return this.form.get("cargo");
+}
+
+get CargoValid(){
+  return this.Cargo?.touched && !this.Cargo.valid;
+}
+
+get Inicio(){
+  return this.form.get("inicio");
+}
+
+get InicioValid(){
+  return this.Inicio?.touched && !this.Inicio.valid;
+}
+
+get Fin(){
+  return this.form.get("fin");
+}
+
+get Descripcion_cargo(){
+  return this.form.get("descripcion_cargo");
+}
+
+get Descripcion_cargoValid(){
+  return this.Descripcion_cargo?.touched && !this.Descripcion_cargo.valid;
+}
+
+get Logo(){
+  return this.form.get("logo");
+}
+
+get Link(){
+  return this.form.get("link");
+}
+
+get Actual(){
+  return this.form.get("actual");
+}
+
+get Personaid(){
+  return this.form.get("personaid");
+}
+
+onUpdate():void{
+  let expe = this.form.value;
+    this.sExperiencia.update(expe.id, expe).subscribe(
+      data => {
+        alert('Experiencia editada correctamente');
+        window.location.reload();
+        this.form.reset();
+      })
   }
 
-  delete(id:number){
-    if(id != undefined){
-      this.sExperiencia.delete(id).subscribe(
-        data =>{
-          this.cargarExperiencia();
-        }, err =>{
-          alert("no se pudo eliminar la experiencia")
-        })
-    }}
+  detail(id:number){
+    this.sExperiencia.detail(id).subscribe(data =>{
+      this.form.setValue(data);
+      console.log(data);
+    })
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if (this.form.valid){
+      this.onUpdate();
+    }else{
+      alert("Falló al editar la experiencia, intente nuevamente");
+      this.form.markAllAsTouched();
+    }
+  }
+
+  cerrar():void{
+    window.location.reload();
+  }
+
+  limpiar():void{
+    this.form.reset();
+  }
+
+  delete(id: number) {
+    this.sExperiencia.delete(id).subscribe(
+      error => {
+        alert("Falló al eliminar la experiencia, intente nuevamente");
+        this.cargarExperiencia();
+      },
+      data => {
+        alert("La experiencia fue eliminada correctamente");
+        this.cargarExperiencia();
+      }
+    )}
 
 }

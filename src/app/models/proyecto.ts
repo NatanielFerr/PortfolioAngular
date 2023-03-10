@@ -7,8 +7,11 @@ export class Proyecto {
     fin: string;
     logo: string;
     link: string;
+    personaid: number;
 
-    constructor(proyecto:string,descripcion:string, inicio:string, fin:string, logo:string, link:string, tecnologia:string) {
+
+    constructor(proyecto:string,descripcion:string, inicio:string, fin:string, 
+        logo:string, link:string, tecnologia:string,personaid: number) {
         this.proyecto = proyecto;
         this.descripcion = descripcion;
         this.tecnologia = tecnologia;
@@ -16,5 +19,6 @@ export class Proyecto {
         this.fin = fin;
         this.logo = logo;
         this.link = link;
+        this.personaid = personaid;
     }
 }

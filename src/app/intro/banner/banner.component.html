@@ -2,7 +2,7 @@
 <section id="imagen-del-banner" class="banner">
     <div>
       <div *ngFor="let persona of personas">
-      <ul class="list-group botones-de-edicion banner list-group-horizontal">
+      <ul *ngIf="modoEdicion" class="list-group botones-de-edicion banner list-group-horizontal">
         <!--                          Button edit                                         -->
       <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#BannerModal"></i></li>
       </ul>

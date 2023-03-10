@@ -1,13 +1,13 @@
   <div class="row">
     <div class="col-3">
       <div *ngFor="let persona of personas">
-      <ul class="list-group botones-de-edicion edicion-perfil list-group-horizontal">
+      <ul *ngIf="modoEdicion" class="list-group botones-de-edicion edicion-perfil list-group-horizontal">
         <!--                          Button edit                                         -->
       <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#PerfilModal"></i></li>
       </ul>
       
     <img [src]="persona.imagen" class="rounded-circle w-75" alt="..." title="...">
-    <ul class="list-group botones-de-edicion edicion-perfil-nombre list-group-horizontal">
+    <ul *ngIf="modoEdicion" class="list-group botones-de-edicion edicion-perfil-nombre list-group-horizontal">
       <!--                          Button edit                                         -->
     <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#PerfilNombreModal"></i></li>
     </ul>
@@ -20,7 +20,7 @@
       <h2 class="d-inline">Acerca De Mi</h2>
     <div class="text-justify-content">
       <div *ngFor="let persona of personas">
-      <ul class="list-group botones-de-edicion edicion-perfil-acercade list-group-horizontal">
+      <ul *ngIf="modoEdicion" class="list-group botones-de-edicion edicion-perfil-acercade list-group-horizontal">
         <!--                          Button edit                                         -->
       <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#EditAcercaDeModal"></i></li>
         <!--                          Button Delete                                       -->

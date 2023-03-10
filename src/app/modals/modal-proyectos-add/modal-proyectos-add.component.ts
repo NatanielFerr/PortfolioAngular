@@ -10,33 +10,45 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
 })
 export class ModalProyectosAddComponent implements OnInit {
   form: FormGroup;
-  proyecto: string = '';
-  inicio: string = '';
-  fin: string = '';
-  descripcion: string = '';
-  tecnologia: string = '';
-  imagen: string = '';
-  link: string = '';
+  proyecto: '';
+  inicio: '';
+  fin: '';
+  descripcion: '';
+  tecnologia: '';
+  logo: any;
+  link: '';
+  proyectos: Proyecto[]=[];
+  personaid: number = 1 ;
 
 
   constructor(private formBuilder:FormBuilder, private sproye: ProyectoService) { 
     this.form = this.formBuilder.group({
+      id:[''],
       proyecto:['', [Validators.required]],
-      inicio:[''],
+      inicio:['', [Validators.required]],
       fin:[''],
       descripcion:['', [Validators.required]],
       tecnologia:[''],
-      imagen:[''],
-      link:['']
+      logo:[''],
+      link:[''],
+      personaid:['']
     })
   }
 
   get Proyecto(){
     return this.form.get("proyecto");
   }
+
+  get ProyectoValid(){
+    return this.Proyecto?.touched && !this.Proyecto.valid;
+  }
   
   get Inicio(){
     return this.form.get("inicio");
+  }
+
+  get InicioValid(){
+    return this.Inicio?.touched && !this.Inicio.valid;
   }
 
   get Fin(){
@@ -47,44 +59,70 @@ export class ModalProyectosAddComponent implements OnInit {
     return this.form.get("descripcion");
   }
 
+  get DescripcionValid(){
+    return this.Descripcion?.touched && !this.Descripcion.valid;
+  }
+
   get Tecnologia(){
     return this.form.get("tecnologia");
   }
 
-  get Imagen(){
-    return this.form.get("imagen");
+  get Logo(){
+    return this.form.get("logo");
   }
 
   get Link(){
     return this.form.get("link");
   }
-  
-  get ProyectoValid(){
-    return this.Proyecto?.touched && !this.Proyecto.valid;
-  }
 
-  get DescripcionValid(){
-    return this.Descripcion?.touched && !this.Descripcion.valid;
+  get Personaid(){
+    return this.form.get("personaid");
   }
+  
+ 
+
   
 
   ngOnInit(): void {
   }
 
-  onCreate(): void{
-    const proye = new Proyecto(this.proyecto, this.descripcion, 
-      this.inicio, this.fin, this.imagen, this.link, this.tecnologia);
-    this.sproye.save(proye).subscribe(data =>{
-      alert("Proyecto Añadido");
-      window.location.reload();
-    }, err =>{
-      alert("Falló en la carga, intente de nuevo");
-      this.form.reset();
+  cargarProyecto():void {
+    this.sproye.lista().subscribe(data =>{
+      console.log(data);
+      this.proyectos = data;
     });
-    }
+  }
+
+  onCreate():void{
+    let proyecto = this.form.value;
+  
+    if (proyecto.id == '') {
+      this.sproye.save(proyecto).subscribe(
+        error =>{
+          alert();
+          this.form.reset();
+          window.location.reload();
+        },
+        data => {
+          alert("Su nuevo proyecto fue añadido correctamente");
+          this.form.reset();
+          window.location.reload();
+        })
+  }
+  }
     
-    limpiar():void{
-      this.form.reset();
+  limpiar():void{
+    this.form.reset();
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if (this.form.valid){
+      this.onCreate();
+    }else{
+      alert("falló al agregar el proyecto, intente nuevamente");
+      this.form.markAllAsTouched();
     }
+  }
 
 }

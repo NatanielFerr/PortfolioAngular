@@ -25,14 +25,12 @@ form: FormGroup;
   porcentaje: any;
   personaid: number = 1 ;
   constructor(private authService: AuthService, private sHabilidad:HabilidadService, 
-    private formBuilder: FormBuilder,
-    private activatedRoute:ActivatedRoute , private router: Router) { 
+    private formBuilder: FormBuilder) { 
       //Modal habilidades edit//
       this.form = this.formBuilder.group({
         id:[''],
         nombre:['',[Validators.required]],
         porcentaje:['',[Validators.required, Validators.min(0), Validators.max(100)]],
-        porcentaje_titulo:[''],
         logo:[''],
         personaid:['']
       }) 
@@ -40,11 +38,6 @@ form: FormGroup;
 
   ngOnInit(): void {
     this.cargarHabilidad();
-    // this.infoService.getInformacion().subscribe(info =>{
-    // console.log(info);
-    // this.habilidad = info.habilidad;
-    
-    
     if (sessionStorage.getItem('currentUser') == "null"){
       this.modoEdicion = false;
     } else if (sessionStorage.getItem('currentUser') == null){
@@ -52,8 +45,6 @@ form: FormGroup;
     } else{
       this.modoEdicion = true;
     }
-  
-  // });
   }
 
   cargarHabilidad():void {
@@ -96,11 +87,6 @@ onUpdate():void{
         alert('Habilidad editada correctamente');
         window.location.reload();
         this.form.reset();
-      },
-      error => {
-        alert('Falló al editar la habilidad, intente nuevamente');
-        window.location.reload();
-        this.form.reset();
       })
   }
 
@@ -116,7 +102,7 @@ onUpdate():void{
     if (this.form.valid){
       this.onUpdate();
     }else{
-      alert("falló en la carga, intente nuevamente");
+      alert("Falló al editar la habilidad, intente nuevamente");
       this.form.markAllAsTouched();
     }
   }
@@ -130,24 +116,16 @@ onUpdate():void{
   }
 
 
-
-  // idEdit(id:number){
-  //     this.sHabilidad.detail(id).subscribe(data =>{
-  //       console.log(data);
-  //     })
-  // }
-
   delete(id: number) {
   this.sHabilidad.delete(id).subscribe(
     error => {
-      alert("falló al eliminar la habilidad, intente nuevamente");
+      alert("Falló al eliminar la habilidad, intente nuevamente");
       this.cargarHabilidad();
     },
     data => {
       alert("La habilidad fue eliminada correctamente");
       this.cargarHabilidad();
     }
-  )
-}
+  )}
 
 }
