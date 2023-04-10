@@ -14,12 +14,16 @@ export class PersonaService {
     return this.httpClient.get<Persona[]>(this.url + 'ver/personas');
   }
 
+  public detallespersona(id:number):Observable<Persona>{
+    return this.httpClient.get<Persona>(this.url + `detail/${id}`);
+  }
+
   public agregarpersona(Persona: Persona):Observable<any>{
     return this.httpClient.post<any>(this.url + 'new/persona', Persona);
   }
 
   public editarpersona(id:number, Persona: Persona):Observable<any>{
-    return this.httpClient.put<any>(this.url + `personas/editar/${id}`, Persona);
+    return this.httpClient.put<any>(this.url + `editar/persona/${id}`, Persona);
   }
 
   public eliminarpersona(id:number):Observable<any>{

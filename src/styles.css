@@ -67,6 +67,11 @@ div#texto-para-ajustar{
     margin-top: 2.5%;
 }
 
+  /*  Para desbloquear modal con navbar  */
+  .modal-backdrop {
+    --bs-backdrop-zindex: 0;
+}
+
 /*  Acomodo del tamaño de los modales  */
 .modal-content {
   width: 130% !important;

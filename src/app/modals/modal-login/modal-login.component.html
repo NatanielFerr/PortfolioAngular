@@ -38,14 +38,14 @@
                   </p>
                   <p *ngIf="Contrasenia?.errors?.['minlength']" class="error">
                     La contraseña debe ser de 4 o más caracteres.
-                  </p>
+                  </p> 
                   <p *ngIf="Contrasenia?.errors?.['maxlength']" class="error">
                     La contraseña debe ser de 12 o menos caracteres.
                   </p>
                 </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="login" id="login">Iniciar Sesión</button>
+                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="login" id="login" onclick="validatePassword()">Iniciar Sesión</button>
                 </div>
               </form>
               </div>

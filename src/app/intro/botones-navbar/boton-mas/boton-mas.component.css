@@ -53,8 +53,8 @@ ul.boton-mas-menu{
 @media screen and (max-width : 920px){
   ul.responsive{
     flex-wrap: wrap;
-    display: block !important;
-    margin-left: 0.5rem;
+    margin-left: 12rem;
+    margin-top: -6rem;
     background-color: #ffffff;
   }
 }

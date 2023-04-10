@@ -58,11 +58,11 @@ export class ModalHabilidadesAddComponent implements OnInit {
     return this.form.get("porcentaje");
   }
 
-  get NombreValid(){
+  get NombreInvalid(){
     return this.Nombre?.touched && !this.Nombre.valid;
   }
 
-  get PorcentajeValid(){
+  get PorcentajeInvalid(){
     return this.Porcentaje?.touched && !this.Porcentaje.valid;
   }
 

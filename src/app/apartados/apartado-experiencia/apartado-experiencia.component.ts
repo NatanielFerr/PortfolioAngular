@@ -28,11 +28,11 @@ export class ApartadoExperienciaComponent implements OnInit {
     logo : any;
     link : '';
     actual : '';
-    personaid: number = 1 ;
+    personaid: number = 1;
 
   constructor(private authService: AuthService, private sExperiencia:ExperienciaService, 
     private formBuilder: FormBuilder) {
-      //Modal habilidades edit//
+      //Modal experiencias edit//
       this.form = this.formBuilder.group({
         id:[''],
         nombre:['',[Validators.required]],
@@ -74,12 +74,12 @@ export class ApartadoExperienciaComponent implements OnInit {
     });
   }
 
-  //Modal habilidades edit//
+  //Modal experiencias edit//
 get Nombre(){
   return this.form.get("nombre");
 }
 
-get NombreValid(){
+get NombreInvalid(){
   return this.Nombre?.touched && !this.Nombre.valid;
 }
 
@@ -87,7 +87,7 @@ get Cargo(){
   return this.form.get("cargo");
 }
 
-get CargoValid(){
+get CargoInvalid(){
   return this.Cargo?.touched && !this.Cargo.valid;
 }
 
@@ -95,7 +95,7 @@ get Inicio(){
   return this.form.get("inicio");
 }
 
-get InicioValid(){
+get InicioInvalid(){
   return this.Inicio?.touched && !this.Inicio.valid;
 }
 
@@ -107,7 +107,7 @@ get Descripcion_cargo(){
   return this.form.get("descripcion_cargo");
 }
 
-get Descripcion_cargoValid(){
+get Descripcion_cargoInvalid(){
   return this.Descripcion_cargo?.touched && !this.Descripcion_cargo.valid;
 }
 

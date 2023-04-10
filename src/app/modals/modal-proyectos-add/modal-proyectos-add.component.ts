@@ -39,7 +39,7 @@ export class ModalProyectosAddComponent implements OnInit {
     return this.form.get("proyecto");
   }
 
-  get ProyectoValid(){
+  get ProyectoInvalid(){
     return this.Proyecto?.touched && !this.Proyecto.valid;
   }
   
@@ -47,7 +47,7 @@ export class ModalProyectosAddComponent implements OnInit {
     return this.form.get("inicio");
   }
 
-  get InicioValid(){
+  get InicioInvalid(){
     return this.Inicio?.touched && !this.Inicio.valid;
   }
 
@@ -59,7 +59,7 @@ export class ModalProyectosAddComponent implements OnInit {
     return this.form.get("descripcion");
   }
 
-  get DescripcionValid(){
+  get DescripcionInvalid(){
     return this.Descripcion?.touched && !this.Descripcion.valid;
   }
 
@@ -108,7 +108,7 @@ export class ModalProyectosAddComponent implements OnInit {
           this.form.reset();
           window.location.reload();
         })
-  }
+    }
   }
     
   limpiar():void{

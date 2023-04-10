@@ -1,4 +1,4 @@
-<!--                                Modal Habilidades Add                                      -->
+<!--                                Modal Experiencias Add                                      -->
 <div class="modal fade" id="AddExperienciaModal" tabindex="-1" aria-labelledby="AddExperienciaModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -15,12 +15,6 @@
             </div>
           </div>
           <div class="mb-3 row">
-            <label class="col-sm-2 col-form-label">Logo de la empresa</label>
-            <div class="col-sm-10">
-              <input type="url" class="form-control" id="logo" formControlName="logo" [(ngModel)]="logo">
-            </div>
-          </div>
-          <div class="mb-3 row">
             <label class="col-sm-2 col-form-label">Nombre</label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="nombre" formControlName="nombre" [(ngModel)]="nombre" [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.
@@ -30,6 +24,12 @@
                     El nombre es requerido.
                 </p>
                 </div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label">Logo de la empresa</label>
+            <div class="col-sm-10">
+              <input type="url" class="form-control" id="logo" formControlName="logo" [(ngModel)]="logo">
             </div>
           </div>
           <div class="mb-3 row">
@@ -77,11 +77,11 @@
           <div class="mb-3 row">
             <label class="col-sm-2 col-form-label">Es trabajo actual?</label>
             <label class="form-check-label">Si 
-              <input class="form-check-input" type="radio" checked="checked" name="actual" formControlName="actual" [(ngModel)]="actual">
-            <span class="checkmark"></span>
+              <input [value]="true" class="form-check-input" type="radio" checked="checked" name="actual" formControlName="actual" [(ngModel)]="actual">
+              <span class="checkmark"></span>
             </label>
             <label class="form-check-label">No 
-              <input class="form-check-input" type="radio" checked="checked" name="actual" formControlName="actual"  name="actual" [(ngModel)]="actual">
+              <input [value]="false" class="form-check-input" type="radio" checked="checked" name="actual" formControlName="actual"  name="actual" [(ngModel)]="actual">
             <span class="checkmark"></span>
             </label>
           </div>

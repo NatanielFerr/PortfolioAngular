@@ -1,5 +1,4 @@
 div.row{
-    margin-top: -2%;
     margin-bottom: 2.5%;
 }
 
@@ -14,9 +13,24 @@ h4#fecha{
 
 /*  edición experiencia y los demas apartados  */
 ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
-    margin-top: 0.5rem;
-    padding-left: 73rem;
+  margin-top: 0.5rem;
+  padding-left: 73rem;
 }
+
+/* Botones de agregar dashboard*/
+i.fa-solid.fa-plus.fa-xl{
+display: block;
+color: #36ceb2;
+}
+i.fa-solid.fa-plus.fa-xl:hover{
+transform: scale(120%);
+}
+
+button.list-group-item.add{
+margin-top: -1.7rem;
+padding-left: 77rem;
+}
+
 
 /*  botones de edición dashboard  */
 i.fa-solid.fa-pen-to-square.fa-xl{
@@ -89,5 +103,36 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
     font-size: 1.5rem;
     line-height: .04167em;
     vertical-align: -0.125em;
+}
+}
+@media screen and (max-width: 500px) {
+  button.list-group-item.add{
+   padding-left: 56.5rem;
+   margin-top: -1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  button.list-group-item.add{
+   margin-left: -37.5rem;
+  }
+}
+
+/* Sección Responsive Modal Educacion Edit */
+@media screen and (max-width: 810px) {
+  div.modal-content{
+      max-width: 100%;
+  }
+div.modal{
+  flex-wrap: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+div.col-sm-10{
+  margin-left: 0.5rem;
+  width: 100%;
+}
+div.modal-footer{
+  margin-left: 4rem;
 }
 }

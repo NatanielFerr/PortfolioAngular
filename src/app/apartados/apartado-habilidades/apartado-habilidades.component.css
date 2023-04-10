@@ -456,22 +456,34 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
         vertical-align: -0.125em;
     }
     }
+    @media screen and (max-width: 500px) {
+      button.list-group-item.add{
+       padding-left: 56.5rem;
+       margin-top: -1rem;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      button.list-group-item.add{
+       margin-left: -37.5rem;
+      }
+    }
 
-     /* Sección Responsive Modal Edit */
- @media screen and (max-width: 810px) {
-  div.modal-content{
-      max-width: 100%;
+  /* Sección Responsive Modal Edit */
+  @media screen and (max-width: 810px) {
+    div.modal-content{
+        max-width: 100%;
+    }
+      div.modal{
+        flex-wrap: nowrap;
+        width: 100%;
+        text-align: center;
+      }
+
+    div.col-sm-10{
+      margin-left: 0.5rem;
+      width: 100%;
+    }
+      div.modal-footer{
+        margin-left: 4rem;
+      }
   }
-div.modal{
-  flex-wrap: nowrap;
-  width: 100%;
-  text-align: center;
-}
-
-div.col-sm-10{
-  margin-left: 0.5rem;
-}
-div.modal-footer{
-  margin-left: 4rem;
-}
-}

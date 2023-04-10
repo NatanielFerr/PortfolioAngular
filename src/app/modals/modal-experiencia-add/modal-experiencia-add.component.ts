@@ -18,6 +18,7 @@ export class ModalExperienciaAddComponent implements OnInit {
   logo : any;
   link : '';
   actual : '';
+  expactual: any;
   experiencias: Experiencia[]=[];
   personaid: number = 1 ;
   
@@ -37,6 +38,7 @@ export class ModalExperienciaAddComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   
   }
 
   cargarExperiencia():void {
@@ -50,7 +52,7 @@ export class ModalExperienciaAddComponent implements OnInit {
     return this.form.get("nombre");
   }
   
-  get NombreValid(){
+  get NombreInvalid(){
     return this.Nombre?.touched && !this.Nombre.valid;
   }
   
@@ -58,7 +60,7 @@ export class ModalExperienciaAddComponent implements OnInit {
     return this.form.get("cargo");
   }
   
-  get CargoValid(){
+  get CargoInvalid(){
     return this.Cargo?.touched && !this.Cargo.valid;
   }
   
@@ -66,7 +68,7 @@ export class ModalExperienciaAddComponent implements OnInit {
     return this.form.get("inicio");
   }
   
-  get InicioValid(){
+  get InicioInvalid(){
     return this.Inicio?.touched && !this.Inicio.valid;
   }
   
@@ -78,7 +80,7 @@ export class ModalExperienciaAddComponent implements OnInit {
     return this.form.get("descripcion_cargo");
   }
   
-  get Descripcion_cargoValid(){
+  get Descripcion_cargoInvalid(){
     return this.Descripcion_cargo?.touched && !this.Descripcion_cargo.valid;
   }
   

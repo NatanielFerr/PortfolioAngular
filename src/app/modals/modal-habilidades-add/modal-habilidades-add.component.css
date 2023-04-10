@@ -1,18 +1,19 @@
- /* Sección Responsive */
- @media screen and (max-width: 810px) {
-    *{
+/* Sección Responsive Modal Experiencia Edit */
+@media screen and (max-width: 810px) {
+    div.modal-content{
         max-width: 100%;
     }
-div.modal{
+  div.modal{
     flex-wrap: nowrap;
     width: 100%;
     text-align: center;
-}
-
-div.col-sm-10{
+  }
+  
+  div.col-sm-10{
     margin-left: 0.5rem;
-}
-div.modal-footer{
+    width: 100%;
+  }
+  div.modal-footer{
     margin-left: 4rem;
-}
+  }
   }

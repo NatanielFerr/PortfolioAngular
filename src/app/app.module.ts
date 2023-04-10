@@ -30,27 +30,10 @@ import { NavbarDashboardComponent } from './dashboard/navbar-dashboard/navbar-da
 import { BotonLogoutComponent } from './dashboard/boton-logout/boton-logout.component';
 import { BotonesEdicionComponent } from './dashboard/botones-edicion/botones-edicion.component';
 import { ModalLogoutComponent } from './modals/modal-logout/modal-logout.component';
-import { ModalRedesEditComponent } from './modals/modal-redes-edit/modal-redes-edit.component';
-import { ModalRedesDeleteComponent } from './modals/modal-redes-delete/modal-redes-delete.component';
-import { ModalBannerComponent } from './modals/modal-banner/modal-banner.component';
-import { ModalPerfilComponent } from './modals/modal-perfil/modal-perfil.component';
-import { ModalPerfilNombreComponent } from './modals/modal-perfil-nombre/modal-perfil-nombre.component';
-import { ModalAcercaDeEditComponent } from './modals/modal-acerca-de-edit/modal-acerca-de-edit.component';
-import { ModalAcercaDeDeleteComponent } from './modals/modal-acerca-de-delete/modal-acerca-de-delete.component';
-import { ModalExperienciaEditComponent } from './modals/modal-experiencia-edit/modal-experiencia-edit.component';
-import { ModalExperienciaDeleteComponent } from './modals/modal-experiencia-delete/modal-experiencia-delete.component';
-import { ModalEducacionEditComponent } from './modals/modal-educacion-edit/modal-educacion-edit.component';
-import { ModalEducacionDeleteComponent } from './modals/modal-educacion-delete/modal-educacion-delete.component';
-import { ModalHabilidadesEditComponent } from './modals/modal-habilidades-edit/modal-habilidades-edit.component';
-import { ModalHabilidadesDeleteComponent } from './modals/modal-habilidades-delete/modal-habilidades-delete.component';
-import { ModalProyectosEditComponent } from './modals/modal-proyectos-edit/modal-proyectos-edit.component';
-import { ModalProyectosDeleteComponent } from './modals/modal-proyectos-delete/modal-proyectos-delete.component';
-import { ModalBotonDeDescargaEditComponent } from './modals/modal-boton-de-descarga-edit/modal-boton-de-descarga-edit.component';
 import { AcercademiDashboardComponent } from './dashboard/acercademi-dashboard/acercademi-dashboard.component';
 import { BannerDashboardComponent } from './dashboard/banner-dashboard/banner-dashboard.component';
 import { ExperienciaDashboardComponent } from './dashboard/experiencia-dashboard/experiencia-dashboard.component';
 import { EducacionDashboardComponent } from './dashboard/educacion-dashboard/educacion-dashboard.component';
-import { HabilidadesDashboardComponent } from './dashboard/habilidades-dashboard/habilidades-dashboard.component';
 import { ProyectosDashboardComponent } from './dashboard/proyectos-dashboard/proyectos-dashboard.component';
 import { EdicionRedesComponent } from './dashboard/botones-edicion/edicion-redes/edicion-redes.component';
 import { PieDePaginaDashboardComponent } from './dashboard/pie-de-pagina-dashboard/pie-de-pagina-dashboard.component';
@@ -95,27 +78,10 @@ import { ModalEducacionAddComponent } from './modals/modal-educacion-add/modal-e
     BotonLogoutComponent,
     BotonesEdicionComponent,
     ModalLogoutComponent,
-    ModalRedesEditComponent,
-    ModalRedesDeleteComponent,
-    ModalBannerComponent,
-    ModalPerfilComponent,
-    ModalPerfilNombreComponent,
-    ModalAcercaDeEditComponent,
-    ModalAcercaDeDeleteComponent,
-    ModalExperienciaEditComponent,
-    ModalExperienciaDeleteComponent,
-    ModalEducacionEditComponent,
-    ModalEducacionDeleteComponent,
-    ModalHabilidadesEditComponent,
-    ModalHabilidadesDeleteComponent,
-    ModalProyectosEditComponent,
-    ModalProyectosDeleteComponent,
-    ModalBotonDeDescargaEditComponent,
     AcercademiDashboardComponent,
     BannerDashboardComponent,
     ExperienciaDashboardComponent,
     EducacionDashboardComponent,
-    HabilidadesDashboardComponent,
     ProyectosDashboardComponent,
     EdicionRedesComponent,
     PieDePaginaDashboardComponent,

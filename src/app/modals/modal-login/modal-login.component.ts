@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/models/persona';
 import { AuthService } from 'src/app/servicios/auth.service';
@@ -13,9 +13,10 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class ModalLoginComponent implements OnInit {
 
-  form!: FormGroup;
+  form: FormGroup;
   personas : Persona[]=[];
   persona = new Persona("","","","","","","","");
+  contrasenia: string;
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private ruta: Router, private sPersona : PersonaService) { 
     this.form= this.formBuilder.group({
       email:['', [Validators.required, Validators.email]],
@@ -32,7 +33,7 @@ export class ModalLoginComponent implements OnInit {
     return this.form.get("contrasenia");
   }
   
-  get ContraseniaInvalid(){
+  get ContraseniaValid(){
     return this.Contrasenia?.touched && !this.Contrasenia?.valid;
   }
 
@@ -40,9 +41,11 @@ export class ModalLoginComponent implements OnInit {
    return this.form.get("email");
   }
   
-  get MailInvalid() {
+  get MailValid() {
     return this.Mail?.touched && !this.Mail?.valid;
   }
+
+
 
   onLogin(event: Event){
 
@@ -60,6 +63,15 @@ export class ModalLoginComponent implements OnInit {
     this.sPersona.verpersonas().subscribe(data =>{
       this.personas = data;
     });
+  }
+
+  validatePassword(): void {
+    if (this.contrasenia === 'user') {
+      console.log('Contraseña válida');
+    } else {
+      console.log('Contraseña inválida');
+    }
+    // this.form.reset();
   }
   
   onEnviarlogin(event:Event){

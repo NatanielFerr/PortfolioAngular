@@ -10,7 +10,7 @@
   /*  botones edición banner  */
   ul.list-group.botones-de-edicion.banner.list-group-horizontal{
     margin-top: 10rem;
-    padding-left: 110rem;
+    padding-left: 102rem;
   }
   
   /*  Posición Botones Edición Dashboard  */
@@ -50,7 +50,7 @@ i.fa-solid.fa-x.fa-xl:hover{
 
 
   /* Sección Responsive */
-@media screen and (max-width : 800px){
+@media screen and (max-width : 900px){
   .texto-banner {
     flex-wrap: wrap;
     margin-left: -1rem;
@@ -60,4 +60,44 @@ i.fa-solid.fa-x.fa-xl:hover{
   img{
     height: 550px;
   }
+}
+
+@media screen and (max-width: 900px) {
+  button.fa-solid.fa-pen-to-square.fa-xl{
+   margin-left: -36rem;
+  }
+  .fa-xl {
+    font-size: 1.5rem;
+    line-height: .04167em;
+    vertical-align: -0.125em;
+}
+}
+@media screen and (max-width: 500px) {
+  ul.edicion-experiencia-y-otros{
+   margin-left: -57rem;
+  }
+  .fa-xl {
+    font-size: 1.5rem;
+    line-height: .04167em;
+    vertical-align: -0.125em;
+}
+}
+
+/* Sección Responsive Modal Banner Edit */
+@media screen and (max-width: 810px) {
+  div.modal-content{
+      max-width: 100%;
+  }
+div.modal{
+  flex-wrap: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+div.col-sm-10{
+  margin-left: 0.5rem;
+}
+div.modal-footer{
+  margin-left: 4rem;
+}
 }

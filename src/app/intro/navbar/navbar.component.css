@@ -13,10 +13,17 @@
           flex-wrap: wrap;
           width: 100%;
           padding: 36px 0px;
+          height: 24rem;
       }
       a{
         margin-top: -6rem;
         text-align: center;
+      }
+      img.logoargprogram{
+        width: 75%;
+        height: 10rem;
+        margin-top: -13rem;
+        margin-left: -3rem;
       }
   }
 

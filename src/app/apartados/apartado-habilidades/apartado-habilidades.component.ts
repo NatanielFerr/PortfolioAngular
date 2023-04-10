@@ -15,7 +15,7 @@ import { InfoService } from 'src/app/servicios/info.service';
 export class ApartadoHabilidadesComponent implements OnInit {
 modoEdicion: any;
 habilidades: Habilidad[]=[];
-Listahabilidades: any;
+// Listahabilidades: any;
 
 //Modal habilidades edit//
 form: FormGroup;
@@ -63,11 +63,11 @@ get Porcentaje(){
   return this.form.get("porcentaje");
 }
 
-get NombreValid(){
+get NombreInvalid(){
   return this.Nombre?.touched && !this.Nombre.valid;
 }
 
-get PorcentajeValid(){
+get PorcentajeInvalid(){
   return this.Porcentaje?.touched && !this.Porcentaje.valid;
 }
 
