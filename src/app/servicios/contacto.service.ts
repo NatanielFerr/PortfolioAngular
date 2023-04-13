@@ -7,7 +7,7 @@ import { Contacto } from '../models/contacto';
   providedIn: 'root'
 })
 export class ContactoService {
-  url = 'http://portfolio-natanielferreyra15.koyeb.app/contactos/';
+  url:string = "https://portfolio-natanielferreyra15.koyeb.app/contactos/";
   constructor(private httpClient:HttpClient) { }
   public send(Contacto : Contacto):Observable<any>{
     return this.httpClient.post<any>(this.url + 'send', Contacto);

@@ -7,7 +7,7 @@ import { Persona } from '../models/persona';
   providedIn: 'root'
 })
 export class PersonaService {
-  url = 'http://portfolio-natanielferreyra15.koyeb.app/personas/';
+  url:string = "https://portfolio-natanielferreyra15.koyeb.app/personas/";
   constructor(private httpClient:HttpClient) { }
   
   public verpersonas():Observable<Persona[]>{

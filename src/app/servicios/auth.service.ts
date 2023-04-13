@@ -6,7 +6,7 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
- url = 'http://portfolio-natanielferreyra15.koyeb.app/personas/autenticacion/login';
+ url:string = "https://portfolio-natanielferreyra15.koyeb.app/personas/autenticacion/login";
  currentUserSubject: BehaviorSubject<any>;
   sessionStorage: any;
 
