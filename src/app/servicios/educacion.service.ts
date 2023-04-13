@@ -7,7 +7,7 @@ import { Educacion } from '../models/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  url = 'http://localhost:8080/educaciones/';
+  url = 'http://portfolio-natanielferreyra15.koyeb.app/educaciones/';
   constructor(private httpClient:HttpClient) { }
   
   public lista():Observable<Educacion[]>{

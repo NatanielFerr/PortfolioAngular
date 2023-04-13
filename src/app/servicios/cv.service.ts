@@ -7,7 +7,7 @@ import { Cv } from '../models/cv';
   providedIn: 'root'
 })
 export class CvService {
-  url = 'http://localhost:8080/curriculums/';
+  url = 'http://portfolio-natanielferreyra15.koyeb.app/curriculums/';
   constructor(private httpClient:HttpClient) { }
   
   public lista():Observable<Cv[]>{
