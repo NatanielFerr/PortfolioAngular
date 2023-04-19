@@ -116,7 +116,6 @@ export class ApartadoProyectosComponent implements OnInit {
     detail(id:number){
       this.sProye.detail(id).subscribe(data =>{
         this.form.setValue(data);
-        console.log(data);
       })
     }
 

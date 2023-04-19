@@ -49,7 +49,6 @@ form: FormGroup;
 
   cargarHabilidad():void {
     this.sHabilidad.lista().subscribe(data =>{
-      console.log(data);
       this.habilidades = data;
     });
   }
@@ -93,7 +92,6 @@ onUpdate():void{
   detail(id:number){
     this.sHabilidad.detail(id).subscribe(data =>{
       this.form.setValue(data);
-      console.log(data);
     })
   }
 

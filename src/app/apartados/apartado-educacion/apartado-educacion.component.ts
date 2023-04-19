@@ -55,15 +55,10 @@ export class ApartadoEducacionComponent implements OnInit {
     } else{
       this.modoEdicion = true;
     }
-    // this.infoService.getInformacion().subscribe(info =>{
-    //   console.log(info);
-    // this.educacion = info.educacion;
-    // });
   }
 
   cargarEducacion():void {
     this.sEducacion.lista().subscribe(data =>{
-      console.log(data);
       this.educaciones = data;
     });
   }

@@ -140,7 +140,6 @@ onUpdate():void{
   detail(id:number){
     this.sExperiencia.detail(id).subscribe(data =>{
       this.form.setValue(data);
-      console.log(data);
     })
   }
 

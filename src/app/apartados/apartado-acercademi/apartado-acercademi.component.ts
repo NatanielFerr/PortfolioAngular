@@ -12,11 +12,6 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class ApartadoAcercademiComponent implements OnInit {
   modoEdicion: any;
-  // nombre : string = '';
-  // apellido : string = '';
-  // sobremi : string = '';
-  // titulo : string = '';
-  // imgperfil: any = '';
   personas : Persona[]=[];
 
   //Modal información edit//
@@ -50,14 +45,6 @@ export class ApartadoAcercademiComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    // this.infoService.getInformacion().subscribe(info =>{
-      
-    //   this.nombre = info.nombre;
-    //   this.apellido = info.apellido;
-    //   this.sobremi = info.sobremi;
-    //   this.titulo = info.titulo;
-    //   this.imgperfil = info.img_perfil;
-    // });
     this.cargarPersona();
     if (sessionStorage.getItem('currentUser') == "null"){
       this.modoEdicion = false;
@@ -71,7 +58,6 @@ export class ApartadoAcercademiComponent implements OnInit {
   cargarPersona():void {
     this.sPersona.verpersonas().subscribe(data =>{
       this.personas = data;
-      console.log(data);
     });
   }
 
@@ -146,7 +132,6 @@ onUpdate():void{
   detail(id:number){
     this.sPersona.detallespersona(id).subscribe(data =>{
       this.form.setValue(data);
-      console.log(data);
     })
   }
 
