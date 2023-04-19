@@ -30,8 +30,6 @@ export class ModalHabilidadesAddComponent implements OnInit {
 
   
   ngOnInit(): void {
-    // this.info();
-    // this.cargarHabilidad();
   }
 
   cargarHabilidad():void {
@@ -39,16 +37,6 @@ export class ModalHabilidadesAddComponent implements OnInit {
       this.habilidades = data;
     });
   }
-
-  // info():void{
-  //   const id = this.activatedRoute.snapshot.params['id'];
-  //   this.sHabilidad.detail(id).subscribe(data => {
-  //     this.habi=data;
-  //   },err =>{
-  //     alert("Error al cargar datos");
-  //     this.router.navigate(['']);
-  //   });
-  // }
 
   get Nombre(){
     return this.form.get("nombre");
@@ -74,15 +62,6 @@ export class ModalHabilidadesAddComponent implements OnInit {
     return this.form.get("personaid");
   }
 
-// onCreate(event: Event){
-//   event.preventDefault();
-//    if (this.form.valid){
-//     this.isupdated=true;
-//     this.sHabilidad.save(JSON.stringify(this.form.value),"habilidad/create").subscribe(data => {});
-//     return "Exito";
-//    }
-// }
-
 
 onCreate():void{
   let habilidad = this.form.value;
@@ -102,17 +81,6 @@ onCreate():void{
 }
 }
 
-  // onCreate(): void{
-  // const hab = new Habilidad(this.nombre, this.porcentaje, this.porcentaje_titulo, this.logo);
-  // this.sHabilidad.save(hab).subscribe(
-  //   error =>{
-  //   alert("Falló en la carga, intente de nuevo");
-  //   window.location.reload();
-  // },data => {
-  //   alert("Habilidad Añadida");
-  //   this.form.reset();
-  // });
-  // }
 
 limpiar():void{
   this.form.reset();

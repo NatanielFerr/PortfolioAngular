@@ -8,6 +8,7 @@ import { Educacion } from '../models/educacion';
 })
 export class EducacionService {
   url:string = "https://portfolio-natanielferreyra15.koyeb.app/educaciones/";
+  // url:string = "http://localhost:8080/educaciones/";
   constructor(private httpClient:HttpClient) { }
   
   public lista():Observable<Educacion[]>{

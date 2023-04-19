@@ -64,15 +64,6 @@ export class ModalLoginComponent implements OnInit {
       this.personas = data;
     });
   }
-
-  validatePassword(): void {
-    if (this.contrasenia === 'user') {
-      console.log('Contraseña válida');
-    } else {
-      console.log('Contraseña inválida');
-    }
-    // this.form.reset();
-  }
   
   onEnviarlogin(event:Event){
     event.preventDefault;

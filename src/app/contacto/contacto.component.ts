@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Contacto } from '../models/contacto';
 import { ContactoService } from '../servicios/contacto.service';
 
@@ -9,6 +9,9 @@ import { ContactoService } from '../servicios/contacto.service';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent implements OnInit {
+  Form: FormGroup;
+  submitted: boolean = false;
+  success: boolean = false;
 
   nombre_y_apellido:'';
   telefono:'';
@@ -27,12 +30,28 @@ export class ContactoComponent implements OnInit {
   // };
 
 
-  constructor(private sContacto:ContactoService) {
-      
+  constructor(private formBuilder: FormBuilder,private sContacto:ContactoService) {
+    
      }
 
   ngOnInit(): void {
+    this.Form = this.formBuilder.group({
+      nombre_y_apellido: [''],
+      telefono: [''],
+      email: [''],
+      asunto: [''],
+      mensaje: ['']
+      });
   }
+
+  onSubmit() {
+    this.submitted = true;
+
+    if (this.Form.invalid) {
+      return;
+    }
+  }
+
 
   Send():void{
     const contacto = new Contacto (this.asunto,this.email,this.mensaje,

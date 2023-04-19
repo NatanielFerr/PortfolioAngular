@@ -13,8 +13,6 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class BannerComponent implements OnInit {
   modoEdicion: any;
-// imgbanner : any = '';
-// bienvenida : any = '';
 personas : Persona[]=[];
 
 //Modal información edit//
@@ -47,11 +45,6 @@ perso = new Persona("","","","","","","","");
      }
 
   ngOnInit(): void {
-    // this.infoService.getInformacion().subscribe(info =>{
-    //   console.log(info);
-    //   this.imgbanner = info.imgbanner;
-    //   this.bienvenida = info;
-    // });
     this.cargarPersona();
     if (sessionStorage.getItem('currentUser') == "null"){
       this.modoEdicion = false;
@@ -65,7 +58,6 @@ perso = new Persona("","","","","","","","");
   cargarPersona():void {
     this.sPersona.verpersonas().subscribe(data =>{
       this.personas = data;
-      console.log(data);
     });
   }
 
@@ -136,7 +128,6 @@ onUpdate():void{
   detail(id:number){
     this.sPersona.detallespersona(id).subscribe(data =>{
       this.form.setValue(data);
-      console.log(data);
     })
   }
 

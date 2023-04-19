@@ -8,6 +8,7 @@ import { Habilidad } from '../models/habilidad';
 })
 export class HabilidadService {
 url:string = "https://portfolio-natanielferreyra15.koyeb.app/habilidades/";
+// url:string = "http://localhost:8080/habilidades/";
   constructor(private httpClient:HttpClient) { }
 
   public lista():Observable<Habilidad[]>{

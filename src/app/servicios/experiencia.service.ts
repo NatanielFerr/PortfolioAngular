@@ -8,6 +8,7 @@ import { Experiencia } from '../models/experiencia';
 })
 export class ExperienciaService {
   url:string = "https://portfolio-natanielferreyra15.koyeb.app/experiencias/";
+  // url:string = "http://localhost:8080/experiencias/";
   constructor(private httpClient:HttpClient) { }
   public lista():Observable<Experiencia[]>{
     return this.httpClient.get<Experiencia[]>(this.url + 'lista');

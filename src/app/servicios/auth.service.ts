@@ -7,6 +7,7 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
 })
 export class AuthService {
  url:string = "https://portfolio-natanielferreyra15.koyeb.app/personas/autenticacion/login";
+// url:string = "http://localhost:8080/personas/autenticacion/login";
  currentUserSubject: BehaviorSubject<any>;
   sessionStorage: any;
 
@@ -23,7 +24,6 @@ export class AuthService {
     }
     return this.http.post<any>(this.url, credenciales, httpOptions).pipe(map(data=> {
      sessionStorage.setItem('currentUser', JSON.stringify(data));
-    //  this.sessionStorage.setItem('idUser', JSON.stringify(data.id));
      this.currentUserSubject.next(data);
      return data;
     }));

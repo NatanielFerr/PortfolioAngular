@@ -13,17 +13,19 @@
           flex-wrap: wrap;
           width: 100%;
           padding: 36px 0px;
-          height: 24rem;
+          height: 25rem;
       }
       a{
         margin-top: -6rem;
         text-align: center;
       }
       img.logoargprogram{
+        display: block;
         width: 75%;
         height: 10rem;
-        margin-top: -13rem;
-        margin-left: -3rem;
+        margin-top: -10rem;
+        margin-left: -1rem;
       }
   }
 
+/*Se acomodaron errores en responsive a partir de navbar y botones mas, los botones mas hace falta seguirlos*/

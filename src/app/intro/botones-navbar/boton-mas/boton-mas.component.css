@@ -47,14 +47,14 @@ div#botones-lista{
 
 ul.boton-mas-menu{
     list-style: none;
-    margin-left: 37rem;
+    margin-left: 47rem;
 }
 
 @media screen and (max-width : 920px){
   ul.responsive{
     flex-wrap: wrap;
-    margin-left: 12rem;
-    margin-top: -6rem;
+    margin-left: 0.1rem;
+    margin-top: 1rem;
     background-color: #ffffff;
   }
 }

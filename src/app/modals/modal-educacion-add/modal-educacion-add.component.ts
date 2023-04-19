@@ -38,7 +38,6 @@ export class ModalEducacionAddComponent implements OnInit {
   }
   cargarEducacion():void {
     this.sEducacion.lista().subscribe(data =>{
-      console.log(data);
       this.educaciones = data;
     });
   }

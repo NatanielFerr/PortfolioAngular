@@ -14,12 +14,10 @@ import { PersonaService } from 'src/app/servicios/persona.service';
   styleUrls: ['./pie-de-pagina.component.css']
 })
 export class PieDePaginaComponent implements OnInit {
+  modoEdicion: any;
   cvs: Cv[]=[];
   personas : Persona[]=[];
   Listacvs: any;
-// botondescarga: any;
-// nombre : string = '';
-// apellido : string = '';
 
 //Modal información edit//
 form: FormGroup;
@@ -45,17 +43,17 @@ personaid: number = 1 ;
   ngOnInit(): void {
     this.cargarCv();
     this.cargarPersona();
-    // this.infoService.getInformacion().subscribe(info =>{
-    //   // console.log(info);
-    //   this.nombre = info.nombre;
-    //   this.apellido = info.apellido;
-    //   this.botondescarga = info.botondescarga;
-    // });
+    if (sessionStorage.getItem('currentUser') == "null"){
+      this.modoEdicion = false;
+    } else if (sessionStorage.getItem('currentUser') == null){
+      this.modoEdicion = false;
+    } else{
+      this.modoEdicion = true;
+    }
   }
 
   cargarCv():void {
     this.sCv.lista().subscribe(data =>{
-      console.log(data);
       this.cvs = data;
     });
   }
@@ -63,7 +61,6 @@ personaid: number = 1 ;
   cargarPersona():void {
     this.sPersona.verpersonas().subscribe(data =>{
       this.personas = data;
-      console.log(data);
     });
   }
 
@@ -97,7 +94,6 @@ onUpdate():void{
   detail(id:number){
     this.sCv.detail(id).subscribe(data =>{
       this.form.setValue(data);
-      console.log(data);
     })
   }
 

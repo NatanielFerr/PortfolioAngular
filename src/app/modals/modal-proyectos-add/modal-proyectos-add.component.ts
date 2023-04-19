@@ -88,7 +88,6 @@ export class ModalProyectosAddComponent implements OnInit {
 
   cargarProyecto():void {
     this.sproye.lista().subscribe(data =>{
-      console.log(data);
       this.proyectos = data;
     });
   }

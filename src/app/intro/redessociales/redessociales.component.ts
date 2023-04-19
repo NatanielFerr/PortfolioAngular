@@ -51,7 +51,6 @@ personaid: number = 1 ;
 
   cargarRed():void {
     this.sRed.lista().subscribe(data =>{
-      console.log(data);
       this.redes = data;
     });
   }
@@ -99,7 +98,6 @@ onUpdate():void{
   detail(id:number){
     this.sRed.detail(id).subscribe(data =>{
       this.form.setValue(data);
-      console.log(data);
     })
   }
 

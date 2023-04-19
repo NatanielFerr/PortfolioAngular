@@ -67,7 +67,6 @@ get Personaid(){
 
   cargarRed():void {
     this.sRed.lista().subscribe(data =>{
-      console.log(data);
       this.redes = data;
     });
   }

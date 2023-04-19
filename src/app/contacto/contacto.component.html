@@ -9,7 +9,7 @@
           <div class="contact-wrapper">
             <div class="contact-form">
               <h2>Contact Me</h2>
-              <form (ngSubmit)="Send()" novalidate #f="ngForm" action="">
+              <form [formGroup]="Form" (ngSubmit)="Send()" novalidate #f="ngForm" action="">
                 <p>
                   <label>Nombre Y Apellido</label>
                   <input type="text" [(ngModel)]="nombre_y_apellido" name="nombre_y_apellido">

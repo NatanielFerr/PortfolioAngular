@@ -57,10 +57,9 @@ ul.boton-mas-menu{
     display: block !important;
     margin-left: 2rem;
   }
-  button.navbar-toggler{
-   margin-bottom: 8rem;
-   margin-left: -22.5rem;
-   position: absolute;
+  button{
+   margin-top: -5rem;
+   margin-left: -23rem;
   }
 }
 
@@ -69,7 +68,6 @@ ul.boton-mas-menu{
   button.navbar-toggler{
     margin-bottom: 8rem;
     margin-left: -21rem;
-    position: block;
    }
 }
 
@@ -78,7 +76,6 @@ ul.boton-mas-menu{
   button.navbar-toggler{
     margin-bottom: 8rem;
     margin-left: -17.3rem;
-    position: block;
    }
 }
 
@@ -87,6 +84,5 @@ ul.boton-mas-menu{
   button.navbar-toggler{
     margin-bottom: 8rem;
     margin-left: -15rem;
-    position: block;
    }
 }

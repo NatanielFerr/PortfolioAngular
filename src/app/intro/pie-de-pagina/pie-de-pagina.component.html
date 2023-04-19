@@ -2,7 +2,7 @@
     <div *ngFor="let cv of cvs" class="grupo-1">
     <p class="responsive">Para descargar mi cv haz click en el siguiente botón</p>
     <a class="boton-descarga responsive" [href]="cv.link" [download]="cv.nombre"><i class="fa-solid fa-download fa-xl"></i></a>
-    <ul class="list-group botones-de-edicion edicion-botondescarga list-group-horizontal">
+    <ul *ngIf="modoEdicion" class="list-group botones-de-edicion edicion-botondescarga list-group-horizontal">
       <div *ngFor="let persona of personas">
       <!--                          Button edit                                         -->
     <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#EditBotonDescargaModal" (click)="detail(cv.id)"></i></li>
