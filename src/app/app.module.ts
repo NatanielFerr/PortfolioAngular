@@ -22,11 +22,23 @@ import { ApartadoHabilidadesComponent } from './apartados/apartado-habilidades/a
 import { ApartadoProyectosComponent } from './apartados/apartado-proyectos/apartado-proyectos.component';
 import { ApartadosComponent } from './apartados/apartados.component';
 import { PieDePaginaComponent } from './intro/pie-de-pagina/pie-de-pagina.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import { IntroComponent } from './intro/intro.component';
 import { BotonLoginComponent } from './intro/boton-login/boton-login.component';
+import { NavbarDashboardComponent } from './dashboard/navbar-dashboard/navbar-dashboard.component';
+import { BotonLogoutComponent } from './dashboard/boton-logout/boton-logout.component';
+import { BotonesEdicionComponent } from './dashboard/botones-edicion/botones-edicion.component';
 import { ModalLogoutComponent } from './modals/modal-logout/modal-logout.component';
+import { AcercademiDashboardComponent } from './dashboard/acercademi-dashboard/acercademi-dashboard.component';
+import { BannerDashboardComponent } from './dashboard/banner-dashboard/banner-dashboard.component';
+import { ExperienciaDashboardComponent } from './dashboard/experiencia-dashboard/experiencia-dashboard.component';
+import { EducacionDashboardComponent } from './dashboard/educacion-dashboard/educacion-dashboard.component';
+import { ProyectosDashboardComponent } from './dashboard/proyectos-dashboard/proyectos-dashboard.component';
+import { EdicionRedesComponent } from './dashboard/botones-edicion/edicion-redes/edicion-redes.component';
+import { PieDePaginaDashboardComponent } from './dashboard/pie-de-pagina-dashboard/pie-de-pagina-dashboard.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ApartadosDashboardComponent } from './dashboard/apartados-dashboard/apartados-dashboard.component';
 import { BotonesNavbarComponent } from './intro/botones-navbar/botones-navbar.component';
 import { BotonAcercadeComponent } from './intro/botones-navbar/boton-acercade/boton-acercade.component';
 import { BotonProyectosComponent } from './intro/botones-navbar/boton-proyectos/boton-proyectos.component';
@@ -58,11 +70,23 @@ import { ModalEducacionAddComponent } from './modals/modal-educacion-add/modal-e
     ApartadoProyectosComponent,
     ApartadosComponent,
     PieDePaginaComponent,
+    DashboardComponent,
     ErrorComponent,
     IntroComponent,
     BotonLoginComponent,
+    NavbarDashboardComponent,
+    BotonLogoutComponent,
+    BotonesEdicionComponent,
     ModalLogoutComponent,
+    AcercademiDashboardComponent,
+    BannerDashboardComponent,
+    ExperienciaDashboardComponent,
+    EducacionDashboardComponent,
+    ProyectosDashboardComponent,
+    EdicionRedesComponent,
+    PieDePaginaDashboardComponent,
     ContactoComponent,
+    ApartadosDashboardComponent,
     BotonesNavbarComponent,
     BotonAcercadeComponent,
     BotonProyectosComponent,
