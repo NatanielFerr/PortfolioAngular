@@ -10,7 +10,6 @@
     font-family: 'Arvo', serif
 }
 body{
-    width: 100%;
     height: auto;
     overflow-x: hidden;
 }
@@ -43,7 +42,7 @@ html{
 
 /*  Sección Apartados  */
 section.information{
-    background-image: url(./assets/img/gray-concrete-wall.jpg);
+    background-image: url(https://i.ibb.co/pRFVpWK/gray-concrete-wall.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size:cover;
@@ -57,14 +56,14 @@ div.border{
 }
 
 div#borde{
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     margin-left: 0.7rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 div#texto-para-ajustar{
     padding-left: 12%;
-    margin-top: 2.5%;
+    margin-top: 2%;
 }
 
   /*  Para desbloquear modal con navbar  */
@@ -78,3 +77,10 @@ div#texto-para-ajustar{
   box-shadow: 0 0 20px 0 rgba(151, 57, 195, 0.631);
 }
 
+@media screen and (max-width : 380px){
+
+  body{
+    margin-top: 6rem;
+  }
+  
+}

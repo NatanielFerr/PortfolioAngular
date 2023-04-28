@@ -75,6 +75,18 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
         margin-top: 1rem;
     }
   }
+  
+  @media screen and (max-width : 420px){
+    ul.list-group.list-group-horizontal.redes{
+      margin-top: 6rem;
+    }
+  }
+
+  @media screen and (max-width : 380px){
+    ul.list-group.list-group-horizontal.redes{
+      margin-top: 6rem;
+    }
+  }
 
   /* Sección Responsive Modal Redes Edit */
  @media screen and (max-width: 810px) {

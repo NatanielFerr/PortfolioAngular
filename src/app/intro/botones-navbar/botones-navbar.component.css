@@ -52,37 +52,106 @@ ul.boton-mas-menu{
 
 /* Sección Responsive */
 @media screen and (max-width : 920px){
-  div.responsive ul{
+  div ul{
     flex-wrap: wrap;
     display: block !important;
     margin-left: 2rem;
   }
-  button{
-   margin-top: -5rem;
-   margin-left: -23rem;
+  button,div{
+   margin-top: -4rem;
+   margin-left: -19rem;
+   position: absolute;
+  }
+  div{
+    margin-left: -10.5rem ;
+    margin-top: -2rem ;
   }
 }
 
-/* Sección Responsive */
-@media screen and (max-width : 790px){
-  button.navbar-toggler{
-    margin-bottom: 8rem;
+@media screen and (max-width : 800px){
+  div ul{
+    flex-wrap: wrap;
+    display: block !important;
+    margin-left: 3rem;
+  }
+  button,div{
+   margin-top: -4rem;
+   margin-left: -18rem;
+   position: absolute;
+  }
+  div{
+    margin-left: -10.5rem ;
+    margin-top: -2rem ;
+  }
+}
+
+@media screen and (max-width : 760px){
+  div ul{
+    flex-wrap: wrap;
+    display: block;
+    margin-left: 4rem;
+  }
+  button,div{
+   margin-top: -4rem;
+   margin-left: -17rem;
+   position: absolute;
+  }
+  div{
+    margin-left: -10.5rem ;
+    margin-top: -2rem ;
+  }
+}
+
+@media screen and (max-width : 420px){
+  div ul{
+    flex-wrap: wrap;
+    display: block;
+    margin-left: -4rem;
+    margin-top: 3rem;
+  }
+  button,div{
+    margin-top: 0rem;
+    margin-left: -25rem;
+    position: absolute;
+  }
+  div{
+    margin-left: -10.5rem ;
+    margin-top: -2rem ;
+  }
+}
+
+@media screen and (max-width : 380px){
+  div ul{
+    flex-wrap: wrap;
+    display: block;
+    margin-left: -1rem;
+    margin-top: 3rem;
+  }
+  button,div{
+    margin-top: 1rem;
+    margin-left: -22rem;
+    position: absolute;
+  }
+  div{
+    margin-left: -10.5rem ;
+    margin-top: -2rem ;
+  }
+}
+
+@media screen and (max-width : 350px){
+  div ul{
+    flex-wrap: wrap;
+    display: block;
+    margin-left: 0rem;
+    margin-top: 3.5rem;
+  }
+  button,div{
+    margin-top: 1rem;
     margin-left: -21rem;
-   }
-}
-
-/* Sección Responsive */
-@media screen and (max-width : 690px){
-  button.navbar-toggler{
-    margin-bottom: 8rem;
-    margin-left: -17.3rem;
-   }
-}
-
-/* Sección Responsive */
-@media screen and (max-width : 480px){
-  button.navbar-toggler{
-    margin-bottom: 8rem;
-    margin-left: -15rem;
-   }
+    position: absolute;
+  }
+  div{
+    margin-left: -10.5rem ;
+    margin-top: -2rem ;
+  }
 }

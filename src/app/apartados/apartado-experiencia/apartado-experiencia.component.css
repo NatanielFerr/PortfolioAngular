@@ -2,6 +2,13 @@ div.row{
     margin-bottom: 2.5%;
 }
 
+div#texto-para-ajustar{
+  height: auto;
+  word-wrap: break-word;
+  width: 100px;
+  overflow: hidden;
+}
+
 div#textonombre{
     white-space: nowrap;
     display:inline-table;
@@ -75,20 +82,166 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
     div.col-1, div.col-sm-10{
         flex-wrap: nowrap;
         text-align: center;
-        width: 20rem;
+        width: 9rem;
         margin-bottom: -2rem;
         position: relative;
     }
 
-    div.col{
+    div.col.text-perfil{
         position: relative;
         width: 20rem;
         flex-wrap: nowrap;
+        padding-top: 1rem;
     }
-    
+    button.list-group-item.add{
+      margin-left: -37rem;
+      margin-top: -2.7rem;
+     }
+     
+     ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
+      margin-left: -36rem;
+     }
+     .fa-xl {
+       font-size: 1.5rem;
+       line-height: .04167em;
+       vertical-align: -0.125em;
+   }
 }
 
-@media screen and (max-width: 900px) {
+ @media screen and (max-width: 800px) {
+    div.col-1, div.col-sm-10{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 9rem;
+        margin-bottom: -2rem;
+        position: relative;
+    }
+
+    div.col.text-perfil{
+        position: relative;
+        width: 20rem;
+        flex-wrap: nowrap;
+        padding-top: 1rem;
+    }
+    button.list-group-item.add{
+      margin-left: -37rem;
+      margin-top: -2.7rem;
+     }
+     
+     ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
+      margin-left: -36rem;
+     }
+     .fa-xl {
+       font-size: 1.5rem;
+       line-height: .04167em;
+       vertical-align: -0.125em;
+   }
+}
+
+ @media screen and (max-width: 760px) {
+    div.col-1, div.col-sm-10{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 9rem;
+        margin-bottom: -2rem;
+        position: relative;
+    }
+
+    div.col.text-perfil{
+        position: relative;
+        width: 20rem;
+        flex-wrap: nowrap;
+        padding-top: 1rem;
+        margin-left: 1rem;
+    }
+    button.list-group-item.add{
+      margin-left: -48rem;
+      margin-top: -2.7rem;
+     }
+     
+     ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
+     margin-left: -47rem;
+     }
+     .fa-xl {
+       font-size: 1.5rem;
+       line-height: .04167em;
+       vertical-align: -0.125em;
+   }
+}
+
+@media screen and (max-width: 420px) {
+  div.col-1, div.col-sm-10{
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 9rem;
+      margin-bottom: -2rem;
+      position: relative;
+      padding-left: 2.5rem;
+  }
+
+  div.col.text-perfil{
+      position: relative;
+      width: 20rem;
+      flex-wrap: nowrap;
+      padding-top: 10rem;
+      margin-left: -8rem;
+  }
+  button.list-group-item.add{
+    margin-left: -58rem;
+    margin-top: -2.7rem;
+   }
+   
+   ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
+    margin-left: -55rem;
+   }
+
+   .fa-xl {
+     font-size: 1.5rem;
+     line-height: .04167em;
+     vertical-align: -0.125em;
+ }
+
+ h2.d-inline {
+  margin-left: 0rem;
+}
+}
+
+@media screen and (max-width: 380px) {
+  div.col-1, div.col-sm-10{
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 9rem;
+      margin-bottom: -2rem;
+      position: relative;
+      padding-left: 2rem;
+  }
+
+  div.col.text-perfil{
+      position: relative;
+      width: 20rem;
+      flex-wrap: nowrap;
+      padding-top: 10rem;
+      margin-left: -8rem;
+  }
+  button.list-group-item.add{
+    margin-left: -61rem;
+    margin-top: -2.7rem;
+   }
+   
+   ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
+    margin-left: -59rem;
+   }
+   .fa-xl {
+     font-size: 1.5rem;
+     line-height: .04167em;
+     vertical-align: -0.125em;
+ }
+
+ h2.d-inline {
+  margin-left: -3rem;
+}
+}
+/* @media screen and (max-width: 900px) {
   ul.edicion-experiencia-y-otros{
    margin-left: -36rem;
   }
@@ -97,8 +250,26 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
     line-height: .04167em;
     vertical-align: -0.125em;
 }
+button.list-group-item.add{
+  margin-left: -40rem;
+  margin-top: -2.7rem;
+ }
 }
 @media screen and (max-width: 500px) {
+  div.col-1, div.col-sm-10{
+    flex-wrap: nowrap;
+    text-align: center;
+    width: 5rem;
+    margin-bottom: -2rem;
+    position: relative;
+} */
+/* Falta acomodar esto  */
+/* div.col{
+    position: relative;
+    width: 20rem;
+    margin-right: -3rem;
+    flex-wrap: nowrap;
+}
   ul.edicion-experiencia-y-otros{
    margin-left: -57rem;
   }
@@ -107,18 +278,12 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
     line-height: .04167em;
     vertical-align: -0.125em;
 }
-}
-@media screen and (max-width: 500px) {
-  button.list-group-item.add{
-   padding-left: 56.5rem;
-   margin-top: -1rem;
-  }
-}
-@media screen and (max-width: 900px) {
-  button.list-group-item.add{
-   margin-left: -37.5rem;
-  }
-}
+button.list-group-item.add{
+  padding-left: 56.5rem;
+  margin-top: -1rem;
+ }
+} */
+
 
 /* Sección Responsive Modal Experiencia Edit */
 @media screen and (max-width: 810px) {

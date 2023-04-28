@@ -69,7 +69,6 @@ export class ApartadoExperienciaComponent implements OnInit {
 
   cargarExperiencia():void {
     this.sExperiencia.lista().subscribe(data =>{
-      console.log(data);
       this.experiencias = data;
     });
   }

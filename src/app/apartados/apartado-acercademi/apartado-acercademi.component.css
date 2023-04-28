@@ -6,6 +6,12 @@
     color: #000000;
     font-family: 'Prompt', sans-serif;
 }
+
+div#texto-acerca-de-mi{
+  height: auto;
+  word-wrap: break-word;
+  overflow: hidden;
+}
 .cinzel-letter{
   font-family: 'Cinzel', serif;
 }
@@ -71,21 +77,160 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
         flex-wrap: nowrap;
         text-align: center;
         width: 11rem;
-        font-size: 65%;
     }
     div.col{
-      text-align: center;
-      width: 20rem;
       margin-top: 3rem;
       margin-bottom: 2rem;
       position: relative;
       flex-wrap: nowrap;
       margin-top: 0.2rem;
-      margin-left: 0.5rem;
+      margin-left: 1.5rem;
   }
+
+  ul.list-group.botones-de-edicion.edicion-perfil.list-group-horizontal{
+    padding-left: 0.5rem;
+    padding-top: 3rem;
+   }
+
+   ul.list-group.botones-de-edicion.edicion-perfil-acercade.list-group-horizontal{
+    padding-left: 22rem;
+  }
+
+  ul.list-group.botones-de-edicion.edicion-perfil-nombre.list-group-horizontal{
+    margin-left: -9.5rem;
+  }
+
+  .fa-xl {
+    font-size: 1.5rem;
+    line-height: .04167em;
+    vertical-align: -0.125em;
+}
     
 }
- @media screen and (max-width: 500px) {
+
+@media screen and (max-width: 760px) {
+  div.col-3, div.col-sm-10{
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 11rem;
+  }
+  div.col{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    flex-wrap: nowrap;
+    margin-top: 0.2rem;
+    margin-left: 1.5rem;
+}
+
+ul.list-group.botones-de-edicion.edicion-perfil.list-group-horizontal{
+  padding-left: 0.5rem;
+  padding-top: 3rem;
+ }
+
+ ul.list-group.botones-de-edicion.edicion-perfil-acercade.list-group-horizontal{
+  padding-left: 17rem;
+}
+
+ul.list-group.botones-de-edicion.edicion-perfil-nombre.list-group-horizontal{
+  margin-left: -9.5rem;
+}
+
+.fa-xl {
+  font-size: 1.5rem;
+  line-height: .04167em;
+  vertical-align: -0.125em;
+}
+
+.row.acercade {
+  margin-top: 3rem;
+}
+  
+}
+
+@media screen and (max-width: 420px) {
+  div.col-3, div.col-sm-10{
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 11rem;
+  }
+  div.col{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    flex-wrap: nowrap;
+    margin-top: 0.2rem;
+    margin-left: 1.5rem;
+}
+
+ul.list-group.botones-de-edicion.edicion-perfil.list-group-horizontal{
+  padding-left: 0.5rem;
+  padding-top: 3rem;
+ }
+
+ ul.list-group.botones-de-edicion.edicion-perfil-acercade.list-group-horizontal{
+  padding-left: 18rem;
+}
+
+ul.list-group.botones-de-edicion.edicion-perfil-nombre.list-group-horizontal{
+  margin-left: -9.5rem;
+}
+
+.fa-xl {
+  font-size: 1.5rem;
+  line-height: .04167em;
+  vertical-align: -0.125em;
+}
+
+.row.acercade {
+  margin-top: 15rem;
+  margin-left: -14rem;
+}
+  
+}
+
+@media screen and (max-width: 380px) {
+  div.col-3, div.col-sm-10{
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 11rem;
+  }
+  div.col{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    flex-wrap: nowrap;
+    margin-top: 0.2rem;
+    margin-left: 1.5rem;
+}
+
+ul.list-group.botones-de-edicion.edicion-perfil.list-group-horizontal{
+  padding-left: 0.5rem;
+  padding-top: 3rem;
+ }
+
+ ul.list-group.botones-de-edicion.edicion-perfil-acercade.list-group-horizontal{
+  padding-left: 16rem;
+}
+
+ul.list-group.botones-de-edicion.edicion-perfil-nombre.list-group-horizontal{
+  margin-left: -9.5rem;
+}
+
+.fa-xl {
+  font-size: 1.5rem;
+  line-height: .04167em;
+  vertical-align: -0.125em;
+}
+
+.row.acercade {
+  margin-top: 15rem;
+  margin-left: -14rem;
+}
+  
+}
+
+ /* @media screen and (max-width: 500px) {
   ul.edicion-perfil-nombre{
     margin-left: -10rem;
    }
@@ -100,7 +245,7 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
     line-height: .04167em;
     vertical-align: -0.125em;
 }
-}
+} */
 
 /* Sección Responsive Modal Perfil Edit */
 @media screen and (max-width: 810px) {

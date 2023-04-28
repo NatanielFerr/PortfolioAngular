@@ -7,7 +7,7 @@ import { Experiencia } from '../models/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url:string = "https://portfolio-natanielferreyra15.koyeb.app/experiencias/";
+  url:string = "https://back-end-natanielferreyra15.koyeb.app/experiencias/";
   // url:string = "http://localhost:8080/experiencias/";
   constructor(private httpClient:HttpClient) { }
   public lista():Observable<Experiencia[]>{

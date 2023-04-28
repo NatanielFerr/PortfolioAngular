@@ -7,7 +7,7 @@ import { Cv } from '../models/cv';
   providedIn: 'root'
 })
 export class CvService {
-  url:string = "https://portfolio-natanielferreyra15.koyeb.app/curriculums/";
+  url:string = "https://back-end-natanielferreyra15.koyeb.app/curriculums/";
   // url:string = "http://localhost:8080/curriculums/";
   constructor(private httpClient:HttpClient) { }
   

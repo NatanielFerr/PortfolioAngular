@@ -58,3 +58,21 @@ ul.boton-mas-menu{
     background-color: #ffffff;
   }
 }
+
+@media screen and (max-width : 420px){
+  ul.responsive{
+    flex-wrap: wrap;
+    margin-left: 13.1rem;
+    margin-top: -7rem;
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (max-width : 380px){
+  ul.responsive{
+    flex-wrap: wrap;
+    margin-left: 12.1rem;
+    margin-top: -7rem;
+    background-color: #ffffff;
+  }
+}

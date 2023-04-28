@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="col pt-md-5 text-perfil">
-    <div class="row">
+    <div class="row acercade">
       <h2 class="d-inline">Acerca De Mi</h2>
     <div class="text-justify-content">
       <div *ngFor="let persona of personas">
@@ -25,7 +25,7 @@
         <!--                          Button edit                                         -->
       <button type="button" class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#EditAcercaDeModal" (click)="detail(persona.id)"></i></button>
       </ul>
-      <div class="col">
+      <div id="texto-acerca-de-mi" class="col">
       <h5 class="d-inline">{{persona.sobre_mi}}</h5>
     </div>
   </div>
