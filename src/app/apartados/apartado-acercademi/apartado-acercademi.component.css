@@ -230,23 +230,6 @@ ul.list-group.botones-de-edicion.edicion-perfil-nombre.list-group-horizontal{
   
 }
 
- /* @media screen and (max-width: 500px) {
-  ul.edicion-perfil-nombre{
-    margin-left: -10rem;
-   }
-   ul.edicion-perfil{
-    margin-left: -7rem;
-   }
-  ul.edicion-perfil-acercade{
-   margin-left: -37rem;
-  }
-  .fa-xl {
-    font-size: 1.5rem;
-    line-height: .04167em;
-    vertical-align: -0.125em;
-}
-} */
-
 /* Sección Responsive Modal Perfil Edit */
 @media screen and (max-width: 810px) {
   div.modal-content{

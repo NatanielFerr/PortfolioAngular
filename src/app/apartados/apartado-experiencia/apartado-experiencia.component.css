@@ -223,6 +223,7 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
       padding-top: 10rem;
       margin-left: -8rem;
   }
+  
   button.list-group-item.add{
     margin-left: -61rem;
     margin-top: -2.7rem;
@@ -241,48 +242,6 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
   margin-left: -3rem;
 }
 }
-/* @media screen and (max-width: 900px) {
-  ul.edicion-experiencia-y-otros{
-   margin-left: -36rem;
-  }
-  .fa-xl {
-    font-size: 1.5rem;
-    line-height: .04167em;
-    vertical-align: -0.125em;
-}
-button.list-group-item.add{
-  margin-left: -40rem;
-  margin-top: -2.7rem;
- }
-}
-@media screen and (max-width: 500px) {
-  div.col-1, div.col-sm-10{
-    flex-wrap: nowrap;
-    text-align: center;
-    width: 5rem;
-    margin-bottom: -2rem;
-    position: relative;
-} */
-/* Falta acomodar esto  */
-/* div.col{
-    position: relative;
-    width: 20rem;
-    margin-right: -3rem;
-    flex-wrap: nowrap;
-}
-  ul.edicion-experiencia-y-otros{
-   margin-left: -57rem;
-  }
-  .fa-xl {
-    font-size: 1.5rem;
-    line-height: .04167em;
-    vertical-align: -0.125em;
-}
-button.list-group-item.add{
-  padding-left: 56.5rem;
-  margin-top: -1rem;
- }
-} */
 
 
 /* Sección Responsive Modal Experiencia Edit */
@@ -290,17 +249,17 @@ button.list-group-item.add{
   div.modal-content{
       max-width: 100%;
   }
-div.modal{
+  div.modal{
   flex-wrap: nowrap;
   width: 100%;
   text-align: center;
-}
+  }
 
-div.col-sm-10{
+  div.col-sm-10{
   margin-left: 0.5rem;
   width: 100%;
-}
-div.modal-footer{
+  }
+  div.modal-footer{
   margin-left: 4rem;
-}
+  }
 }

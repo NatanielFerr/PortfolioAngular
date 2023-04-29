@@ -60,8 +60,9 @@ i.fa-solid.fa-x.fa-xl:hover{
   img{
     height: 550px;
   }
-  button.fa-solid.fa-pen-to-square.fa-xl{
-    margin-left: -36rem;
+  i.fa-solid.fa-pen-to-square.fa-xl.banner{
+    margin-left: -114rem;
+    margin-top: 8rem;
    }
    .fa-xl {
      font-size: 1.5rem;
@@ -70,26 +71,42 @@ i.fa-solid.fa-x.fa-xl:hover{
  }
 }
 
-/* @media screen and (max-width: 900px) {
-  button.fa-solid.fa-pen-to-square.fa-xl{
-   margin-left: -36rem;
-  }
-  .fa-xl {
-    font-size: 1.5rem;
-    line-height: .04167em;
-    vertical-align: -0.125em;
+@media screen and (max-width : 760px){
+  
+  i.fa-solid.fa-pen-to-square.fa-xl.banner{
+    margin-left: -117rem;
+    margin-top: 8rem;
+   }
+   .fa-xl {
+     font-size: 1.5rem;
+     line-height: .04167em;
+     vertical-align: -0.125em;
+ }
 }
+
+@media screen and (max-width : 420px){
+  i.fa-solid.fa-pen-to-square.fa-xl.banner{
+    margin-left: -157rem;
+    margin-top: 8rem;
+   }
+   .fa-xl {
+     font-size: 1.5rem;
+     line-height: .04167em;
+     vertical-align: -0.125em;
+ }
 }
-@media screen and (max-width: 500px) {
-  ul.edicion-experiencia-y-otros{
-   margin-left: -57rem;
-  }
-  .fa-xl {
-    font-size: 1.5rem;
-    line-height: .04167em;
-    vertical-align: -0.125em;
+
+@media screen and (max-width : 380px){
+  i.fa-solid.fa-pen-to-square.fa-xl.banner{
+    margin-left: -167rem;
+    margin-top: 7rem;
+   }
+   .fa-xl {
+     font-size: 1.5rem;
+     line-height: .04167em;
+     vertical-align: -0.125em;
+ }
 }
-} */
 
 /* Sección Responsive Modal Banner Edit */
 @media screen and (max-width: 810px) {

@@ -96,6 +96,7 @@
       font-size: 1.5rem;
       line-height: .04167em;
       vertical-align: -0.125em;
+      margin-left: -5rem;
   }
   }
   @media screen and (max-width: 500px) {

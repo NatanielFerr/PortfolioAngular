@@ -19,16 +19,6 @@ export class ContactoComponent implements OnInit {
   asunto:'';
   mensaje:'';
 
-  // title = 'EmailTemplate';
-
-  // dataset: Details = {
-  //   nombre_y_apellido: '',
-  //   telefono:'',
-  //   email:'',
-  //   asunto:'',
-  //   mensaje:''
-  // };
-
 
   constructor(private formBuilder: FormBuilder,private sContacto:ContactoService) {
     
@@ -56,7 +46,7 @@ export class ContactoComponent implements OnInit {
   Send():void{
     const contacto = new Contacto (this.asunto,this.email,this.mensaje,
       this.nombre_y_apellido,this.telefono);
-    this.sContacto.send(contacto).subscribe(
+     this.sContacto.submit(contacto).subscribe(
       data => {
       alert("Mail Enviado");
       this.asunto='';
@@ -67,29 +57,5 @@ export class ContactoComponent implements OnInit {
     
     })
   }
-
-//   onSubmit()
-//   {
-//     this.https.post<Details>('http://localhost:8080/testapp/traer', this.dataset).subscribe(
-//       res => {
-//         this.dataset = res;
-//         console.log(this.dataset);
-//         alert('Email Sent successfully');
-//         this.dataset.asunto = '',
-//         this.dataset.email = '',
-//         this.dataset.telefono = '',
-//         this.dataset.mensaje = '',
-//         this.dataset.nombre_y_apellido = ''   
-//       });
-//   }
-// }
-
-// interface Details
-// {
-//   nombre_y_apellido: '',
-//   telefono:'',
-//   email:'',
-//   asunto:'',
-//   mensaje:''
 
 }

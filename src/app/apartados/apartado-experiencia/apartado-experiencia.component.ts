@@ -59,13 +59,6 @@ export class ApartadoExperienciaComponent implements OnInit {
  
   }
 
-  trabajoActual():void{
-    if (this.actual !== ''){
-      "No"
-    }else{
-      "Trabajo actual"
-    };
-  }
 
   cargarExperiencia():void {
     this.sExperiencia.lista().subscribe(data =>{

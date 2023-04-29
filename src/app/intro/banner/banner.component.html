@@ -4,7 +4,7 @@
       <div *ngFor="let persona of personas">
       <ul *ngIf="modoEdicion" class="list-group botones-de-edicion banner list-group-horizontal">
         <!--                          Button edit                                         -->
-      <button type="button" class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#BannerModal" (click)="detail(persona.id)"></i></button>
+      <button type="button" class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl banner" type="button" data-bs-toggle="modal" data-bs-target="#BannerModal" (click)="detail(persona.id)"></i></button>
       </ul>
       <img [src]="persona.banner" width="100%" height="750vh" alt="...">
       <h1 class="texto-banner">Hola! <br> Bienvenido/a a mi portfolio, <br> 

@@ -434,39 +434,142 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
    div.responsive{
     margin-left: -2rem;
    }
+
+   div.col-1, div.col-sm-10{
+    flex-wrap: nowrap;
+    text-align: center;
+    width: 9rem;
+    margin-bottom: -2rem;
+    position: relative;
+}
+
+button.list-group-item.add{
+  margin-left: -37rem;
+  margin-top: -2.7rem;
+ }
+ 
+ ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
+  margin-left: 0rem;
+ }
+ .fa-xl {
+   font-size: 1.5rem;
+   line-height: .04167em;
+   vertical-align: -0.125em;
+  }
+}
+  
+   @media screen and (max-width: 800px) {
+    div.col-1, div.col-sm-10{
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 9rem;
+      margin-bottom: -2rem;
+      position: relative;
     }
 
-    @media screen and (max-width: 900px) {
-      ul.edicion-experiencia-y-otros{
-       margin-left: -1rem;
-      }
-      .fa-xl {
-        font-size: 1.5rem;
-        line-height: .04167em;
-        vertical-align: -0.125em;
-    }
-    }
-    @media screen and (max-width: 500px) {
-      ul.edicion-experiencia-y-otros{
-       margin-left: 2rem;
-      }
-      .fa-xl {
-        font-size: 1.5rem;
-        line-height: .04167em;
-        vertical-align: -0.125em;
-    }
-    }
-    @media screen and (max-width: 500px) {
+    div.responsive{
+      margin-left: -3rem;
+     }
+
       button.list-group-item.add{
-       padding-left: 56.5rem;
-       margin-top: -1rem;
-      }
-    }
-    @media screen and (max-width: 900px) {
+        margin-left: -37rem;
+        margin-top: -2.7rem;
+       }
+       
+       .fa-xl {
+         font-size: 1.5rem;
+         line-height: .04167em;
+         vertical-align: -0.125em;
+     }
+  }
+  
+   @media screen and (max-width: 760px) {
+    div.col-1, div.col-sm-10{
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 9rem;
+      margin-bottom: -2rem;
+      position: relative;
+  }
+
+  div.responsive{
+    margin-left: -3rem;
+   }
+
       button.list-group-item.add{
-       margin-left: -37.5rem;
-      }
-    }
+        margin-left: -48rem;
+        margin-top: -2.7rem;
+       }
+       
+       .fa-xl {
+         font-size: 1.5rem;
+         line-height: .04167em;
+         vertical-align: -0.125em;
+     }
+  }
+  
+  @media screen and (max-width: 420px) {
+    div.responsive{
+      margin-left: -3rem;
+     }
+
+     div.col-1, div.col-sm-10{
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 9rem;
+      margin-bottom: -2rem;
+      position: relative;
+      padding-left: 2.5rem;
+  }
+    button.list-group-item.add{
+      margin-left: -58rem;
+      margin-top: -2.7rem;
+     }
+  
+     .fa-xl {
+       font-size: 1.5rem;
+       line-height: .04167em;
+       vertical-align: -0.125em;
+   }
+  
+   h2.d-inline {
+    margin-left: 0rem;
+  }
+  }
+  
+  @media screen and (max-width: 380px) {
+    div.responsive{
+      margin-left: -3rem;
+     }
+
+     div.col-1, div.col-sm-10{
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 9rem;
+      margin-bottom: -2rem;
+      position: relative;
+      padding-left: 2rem;
+  }
+
+    button.list-group-item.add{
+      margin-left: -62rem;
+      margin-top: -2.7rem;
+     }
+     
+     ul.list-group.botones-de-edicion.edicion-experiencia-y-otros.list-group-horizontal{
+      margin-left: -3rem;
+     }
+     .fa-xl {
+       font-size: 1.5rem;
+       line-height: .04167em;
+       vertical-align: -0.125em;
+   }
+  
+   h2.d-inline {
+    margin-left: -5rem;
+  }
+  }
+
 
   /* Sección Responsive Modal Edit */
   @media screen and (max-width: 810px) {
