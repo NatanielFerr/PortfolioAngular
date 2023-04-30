@@ -46,13 +46,13 @@
         <div class="mb-3 row">
           <label hidden class="col-sm-2 col-form-label">Persona Id</label>
           <div class="col-sm-10">
-            <input type="hidden" class="form-control" id="personaid" formControlName="personaid" [(ngModel)]="personaid">
+            <input type="hidden" class="form-control" id="personaid" formControlName="personaid" [(ngModel)]="educ.personaid">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-2 col-form-label">Nombre</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="nivel" formControlName="nivel" [(ngModel)]="nivel" [ngClass]="{'is-invalid': Nivel?.errors && Nivel?.
+            <input type="text" class="form-control" id="nivel" formControlName="nivel" [(ngModel)]="educ.nivel" [ngClass]="{'is-invalid': Nivel?.errors && Nivel?.
             touched, 'is-valid': !Nivel?.errors && Nivel?.touched}">
             <div *ngIf="Nivel?.errors && Nivel?.touched">
               <p *ngIf="Nivel?.hasError('required')" class="text-danger">
@@ -64,13 +64,13 @@
         <div class="mb-3 row">
           <label class="col-sm-2 col-form-label">Imagen</label>
           <div class="col-sm-10">
-            <input type="url" class="form-control" id="img" formControlName="logo" [(ngModel)]="img">
+            <input type="url" class="form-control" id="img" formControlName="img" [(ngModel)]="educ.img">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-2 col-form-label">Inicio</label>
           <div class="col-sm-10">
-            <input type="date" class="form-control" id="floatingInput" formControlName="inicio"  name="inicio" [(ngModel)]="inicio" [ngClass]="{'is-invalid': Inicio?.errors && Inicio?.
+            <input type="date" class="form-control" id="floatingInput" formControlName="inicio"  name="inicio" [(ngModel)]="educ.inicio" [ngClass]="{'is-invalid': Inicio?.errors && Inicio?.
             touched, 'is-valid': !Inicio?.errors && Inicio?.touched}">
             <div *ngIf="Inicio?.errors && Inicio?.touched">
               <p *ngIf="Inicio?.hasError('required')" class="text-danger">
@@ -82,13 +82,13 @@
         <div class="mb-3 row">
           <label class="col-sm-2 col-form-label">Fin</label>
           <div class="col-sm-10">
-            <input type="date" class="form-control" id="floatingInput" formControlName="fin"  name="fin" [(ngModel)]="fin">
+            <input type="date" class="form-control" id="floatingInput" formControlName="fin"  name="fin" [(ngModel)]="educ.fin">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-2 col-form-label">Descripción</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="floatingInput" formControlName="descripcion"  name="descripcion" [(ngModel)]="descripcion" [ngClass]="{'is-invalid': Descripcion?.errors && Descripcion?.
+            <input type="text" class="form-control" id="floatingInput" formControlName="descripcion"  name="descripcion" [(ngModel)]="educ.descripcion" [ngClass]="{'is-invalid': Descripcion?.errors && Descripcion?.
             touched, 'is-valid': !Descripcion?.errors && Descripcion?.touched}">
             <div *ngIf="Descripcion?.errors && Descripcion?.touched">
               <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
@@ -100,7 +100,7 @@
         <div class="mb-3 row">
           <label class="col-sm-2 col-form-label">Link</label>
           <div class="col-sm-10">
-            <input type="url" class="form-control" id="floatingInput" formControlName="link"  name="link" [(ngModel)]="link">
+            <input type="url" class="form-control" id="floatingInput" formControlName="link"  name="link" [(ngModel)]="educ.link">
           </div>
         </div>
       </div>

@@ -20,13 +20,13 @@ export class ApartadoProyectosComponent implements OnInit {
   //Modal proyectos edit//
   form:FormGroup;
   proye = new Proyecto("","","","","","","",1);
-  proyecto: string = '';
-  inicio: string = '';
-  fin: string = '';
-  descripcion: string = '';
-  tecnologia: string = '';
-  logo: string = '';
-  link: string = '';
+  proyecto: '';
+  inicio: '';
+  fin: '';
+  descripcion: '';
+  tecnologia: '';
+  logo: any;
+  link: '';
   personaid: number = 1 ;
 
   constructor(private authService: AuthService, 

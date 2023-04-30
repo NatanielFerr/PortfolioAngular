@@ -21,7 +21,7 @@ export class ApartadoAcercademiComponent implements OnInit {
   nombre : '';
   apellido : '';
   titulo : '';
-  imagen : '';
+  imagen : any;
   banner : any;
   email : '';
   contrasenia : ''

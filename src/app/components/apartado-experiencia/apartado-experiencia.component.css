@@ -183,7 +183,7 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
       position: relative;
       width: 20rem;
       flex-wrap: nowrap;
-      padding-top: 10rem;
+      padding-top: 12rem;
       margin-left: -8rem;
   }
   button.list-group-item.add{
@@ -220,7 +220,7 @@ ul.list-group.botones-de-edicion.list-group-horizontal {
       position: relative;
       width: 20rem;
       flex-wrap: nowrap;
-      padding-top: 10rem;
+      padding-top: 12rem;
       margin-left: -8rem;
   }
   
