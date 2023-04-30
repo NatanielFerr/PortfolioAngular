@@ -56,7 +56,7 @@
   }
 
   /*  botones edición redes  */
-  li.list-group-item.edicion-redes{
+  button.list-group-item.edicion-redes{
   margin-top: -1rem;
   }
 

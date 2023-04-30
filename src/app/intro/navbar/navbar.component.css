@@ -26,11 +26,6 @@
         margin-left: -1rem;
         position: static;
       }
-
-      /* app-botones-navbar *{
-        margin-left: 5rem;
-        display:grid;
-      } */
   }
 
   @media screen and (max-width: 420px) {
@@ -51,11 +46,6 @@
       margin-left: -1rem;
       position: static;
     }
-
-    /* app-botones-navbar *{
-      margin-left: 5rem;
-      display:grid;
-    } */
 }
 
 @media screen and (max-width: 380px) {
@@ -76,12 +66,4 @@
     margin-left: -1rem;
     position: static;
   }
-
-  /* app-botones-navbar *{
-    margin-left: 5rem;
-    display:grid;
-  } */
 }
-
-
-/*Se acomodaron errores en responsive a partir de navbar y botones mas, los botones mas hace falta seguirlos*/
