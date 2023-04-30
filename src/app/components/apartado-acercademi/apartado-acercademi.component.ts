@@ -1,32 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Persona } from 'src/app/models/persona';
 import { AuthService } from 'src/app/services/auth.service';
-import { InfoService } from 'src/app/services/info.service';
 import { PersonaService } from 'src/app/services/persona.service';
 
 
 @Component({
-  selector: 'app-banner',
-  templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.css']
+  selector: 'app-apartado-acercademi',
+  templateUrl: './apartado-acercademi.component.html',
+  styleUrls: ['./apartado-acercademi.component.css']
 })
-export class BannerComponent implements OnInit {
+export class ApartadoAcercademiComponent implements OnInit {
   modoEdicion: any;
-personas : Persona[]=[];
+  personas : Persona[]=[];
 
-//Modal información edit//
-form: FormGroup;
-perso = new Persona("","","","","","","","");
-  banner : any;
+  //Modal información edit//
+  form: FormGroup;
+  perso = new Persona("","","","","","","","");
   sobre_mi : '';
-  nombre: '';
+  nombre : '';
   apellido : '';
   titulo : '';
   imagen : '';
+  banner : any;
   email : '';
   contrasenia : ''
 
+    
 
   constructor(private authService: AuthService, private sPersona:PersonaService, 
     private formBuilder: FormBuilder) {
@@ -62,57 +62,61 @@ perso = new Persona("","","","","","","","");
   }
 
   //Modal información edit//
-  get Sobre_mi(){
-    return this.form.get("sobre_mi");
-  }
-  
-  get Sobre_miInvalid(){
-    return this.Sobre_mi?.touched && !this.Sobre_mi.valid;
-  }
-  
-  get Nombre(){
-    return this.form.get("nombre");
-  }
-  
-  get NombreInvalid(){
-    return this.Nombre?.touched && !this.Nombre.valid;
-  }
-  
-  get Apellido(){
-    return this.form.get("apellido");
-  }
-  
-  get ApellidoInvalid(){
-    return this.Apellido?.touched && !this.Apellido.valid;
-  }
-  
-  get Titulo(){
-    return this.form.get("titulo");
-  }
-  
-  get TituloInvalid(){
-    return this.Titulo?.touched && !this.Titulo.valid;
-  }
+get Sobre_mi(){
+  return this.form.get("sobre_mi");
+}
 
-  get Contrasenia(){
-    return this.form.get("contrasenia");
-  }
-  
-  get ContraseniaInvalid(){
-    return this.Contrasenia?.touched && !this.Contrasenia?.valid;
-  }
-  
-  get Mail(){
-   return this.form.get("email");
-  }
-  
-  get MailInvalid() {
-    return this.Mail?.touched && !this.Mail?.valid;
-  }
+get Sobre_miInvalid(){
+  return this.Sobre_mi?.touched && !this.Sobre_mi.valid;
+}
 
-  get Banner(){
+get Nombre(){
+  return this.form.get("nombre");
+}
+
+get NombreInvalid(){
+  return this.Nombre?.touched && !this.Nombre.valid;
+}
+
+get Apellido(){
+  return this.form.get("apellido");
+}
+
+get ApellidoInvalid(){
+  return this.Apellido?.touched && !this.Apellido.valid;
+}
+
+get Titulo(){
+  return this.form.get("titulo");
+}
+
+get TituloInvalid(){
+  return this.Titulo?.touched && !this.Titulo.valid;
+}
+
+get Imagen(){
+  return this.form.get("imagen");
+}
+
+get Contrasenia(){
+  return this.form.get("contrasenia");
+}
+
+get ContraseniaInvalid(){
+  return this.Contrasenia?.touched && !this.Contrasenia?.valid;
+}
+
+get Mail(){
+ return this.form.get("email");
+}
+
+get MailInvalid() {
+  return this.Mail?.touched && !this.Mail?.valid;
+}
+
+get Banner(){
   return this.form.get("banner");
-  }
+}
 
 
 onUpdate():void{
@@ -148,5 +152,6 @@ onUpdate():void{
   limpiar():void{
     this.form.reset();
   }
+
 
 }

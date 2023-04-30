@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Educacion } from 'src/app/models/educacion';
-import { EducacionService } from 'src/app/servicios/educacion.service';
+import { EducacionService } from 'src/app/services/educacion.service';
 
 @Component({
   selector: 'app-modal-educacion-add',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Contacto } from '../models/contacto';
-import { ContactoService } from '../servicios/contacto.service';
+import { ContactoService } from '../services/contacto.service';
 
 @Component({
   selector: 'app-contacto',

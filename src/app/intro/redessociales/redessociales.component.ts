@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Red } from 'src/app/models/red';
-import { AuthService } from 'src/app/servicios/auth.service';
-import { InfoService } from 'src/app/servicios/info.service';
-import { RedService } from 'src/app/servicios/red.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { InfoService } from 'src/app/services/info.service';
+import { RedService } from 'src/app/services/red.service';
 
 
 @Component({

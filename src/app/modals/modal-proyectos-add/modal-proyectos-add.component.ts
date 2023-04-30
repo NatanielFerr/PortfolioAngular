@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Proyecto } from 'src/app/models/proyecto';
-import { ProyectoService } from 'src/app/servicios/proyecto.service';
+import { ProyectoService } from 'src/app/services/proyecto.service';
 
 @Component({
   selector: 'app-modal-proyectos-add',

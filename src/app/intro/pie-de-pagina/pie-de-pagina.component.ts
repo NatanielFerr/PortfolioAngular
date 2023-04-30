@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Cv } from 'src/app/models/cv';
 import { Persona } from 'src/app/models/persona';
-import { AuthService } from 'src/app/servicios/auth.service';
-import { CvService } from 'src/app/servicios/cv.service';
-import { InfoService } from 'src/app/servicios/info.service';
-import { PersonaService } from 'src/app/servicios/persona.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { CvService } from 'src/app/services/cv.service';
+import { InfoService } from 'src/app/services/info.service';
+import { PersonaService } from 'src/app/services/persona.service';
 
 
 @Component({

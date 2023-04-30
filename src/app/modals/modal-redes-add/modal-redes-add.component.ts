@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Red } from 'src/app/models/red';
-import { RedService } from 'src/app/servicios/red.service';
+import { RedService } from 'src/app/services/red.service';
 
 @Component({
   selector: 'app-modal-redes-add',

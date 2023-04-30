@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/models/persona';
-import { AuthService } from 'src/app/servicios/auth.service';
-import { PersonaService } from 'src/app/servicios/persona.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { PersonaService } from 'src/app/services/persona.service';
 
 
 @Component({
